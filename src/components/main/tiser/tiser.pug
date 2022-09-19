@@ -1,7 +1,10 @@
+include ../../common/mixins/splide.pug
 .tiser
-    .tiser-content__container 
-        include ../tiser-content/tiser-content.pug
-    .flyingChair__container 
-        include ../../common/flyingChair/flyingChair.pug
-    a.cursor-down(href="#")
-        img(src="../../../../assets/svg/cursor-down.svg")
+    +splide("tiser",tiser)
+        img(src=val.img, width="300px")
+    .tiser__controls 
+        .arrow.arrow_180
+        .arrow
+        
+
+        

@@ -1,4 +1,10 @@
 tiser:
-  slogan: Качество и красота
-  title: Стулья на заказ
-  text: Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться
+    - title: Детские кроватки
+      text: Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+      img: "../../assets/images/white-child-bedroom-interior-with-copy-space.jpg"
+    - title: Детские кроватки
+      text: Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+      img: "../../assets/images/white-child-bedroom-interior-with-copy-space.jpg"
+    - title: Детские кроватки
+      text: Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+      img: "../../assets/images/white-child-bedroom-interior-with-copy-space.jpg"
