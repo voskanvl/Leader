@@ -19,6 +19,7 @@ a
     width: 46px
     height: 46px
     cursor: pointer
+    background-position: center
 
     &_180
         transform: rotateZ(180deg)
@@ -80,36 +81,13 @@ a
         row-gap: 1em
         margin-left: 0em
 
-.top-back, .middle-rect, .bottom-rect
-    position: absolute
-    top: 0
-    left: 0
-    z-index: -1
-
-.top-back
-    @media screen and ( max-width: 1024px )
-        left: unset
-        right: 21vw
-
-.middle-rect
-    top: 1400px
-
-.bottom-rect
-    top: 2120px
-    left: unset
-    right: 0
-    // clip-path: polygon(0 0, 80% 0, 80% 100%, 0% 100%)
-
-.cursor-down
-    position: absolute
-    bottom: 7rem
-    left: 50%
-    transform: translateX(-50%)
-    @media screen and ( max-width: 1024px )
-        bottom: 1rem
-
 .developer
     background: url("../../assets/icons/ruws.png") no-repeat
     background-size: contain
     width: 100px
     height: 35px
+
+.title
+    margin-bottom: 30px
+    font-weight: 500
+    font-size: 30px
