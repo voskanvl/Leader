@@ -1,0 +1,10 @@
+cardList:
+    - name: Кроватка детская
+      price: 9999
+      img: "../../assets/images/krovatka_detskaya_oliviya.png"
+    - name: Стул Модерн
+      price: 5999
+      img: "../../assets/images/chair-modern.avif"
+    - name: Стол для офиса
+      price: 19999
+      img: "../../assets/images/office-table.avif"

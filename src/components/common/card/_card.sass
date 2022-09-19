@@ -1,0 +1,56 @@
+.card
+    border-radius: 10px
+    border: 1px solid #878786
+    width: 303px
+    height: 408px
+    overflow: hidden
+    margin: 0 17px
+    background: #fff
+    display: grid
+    grid-template-rows: 313px 95px
+    position: relative
+
+    &__img
+        height: 100%
+
+    &__icons
+        position: absolute
+        bottom: 95px
+        height: 33px
+        width: 100%
+        display: flex
+        justify-content: center
+        column-gap: 35px
+        opacity: 0
+        transition: .5s
+
+    &__card
+        background: url("../../../../assets/icons/card.svg")
+        width: 33px
+        height: 33px
+
+    &__look
+        background: url("../../../../assets/icons/look.svg")
+        width: 33px
+        height: 33px
+
+    &:hover &__icons
+        bottom: 109px
+        opacity: 1
+
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        row-gap: 14px
+        width: 303px
+
+    &__name
+        font-weight: 500
+        font-size: 20px
+
+    &__price
+        font-weight: 500
+        font-size: 18px
+        color: #EC9704

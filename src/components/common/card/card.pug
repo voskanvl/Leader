@@ -1,0 +1,9 @@
+mixin card(val)
+    .card 
+        img.card__img(src=val.img, alt=val.name)
+        .card__content 
+            .card__name= val.name
+            .card__price= val.price
+        .card__icons
+            a.card__look(href="#")
+            a.card__card(href="#") 
