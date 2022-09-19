@@ -1,0 +1,25 @@
+.footer__container 
+    .footer 
+        menu.footer__menu Меню
+            each i in footer.menu
+                a.footer__menuitem(href= i.href)
+                    menuitem= i.title
+        nav.footer__menu.footer__contacts контакты
+            a.footer__menuitem(href="#")
+                menuitem= common.phone
+            a.footer__menuitem(href="#")
+                menuitem= common.email
+            a.footer__menuitem(href="#")
+                menuitem= common.address
+
+        .footer__search
+            input.footer__input(type="text")
+            .circle
+                button.threedots
+                    img(src="../../../assets/svg/search.svg", alt="search")
+        a.footer__logo(href="#") 
+            img.logo(src="../../../assets/svg/logo.svg")
+        a.developer(href="https://russiaws.ru/") 
+            //- span Разработано
+            //- img(src="", alt="")
+            //- span RUWS

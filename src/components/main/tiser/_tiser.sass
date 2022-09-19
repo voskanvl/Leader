@@ -1,0 +1,15 @@
+.tiser
+    display: grid
+    grid-template-columns: 1fr 1fr
+    place-items: start
+    width: min(1200px, 82.5vw)
+    margin-inline: auto
+    margin-bottom: 0px
+    position: relative
+
+    @media screen and (max-width: 1024px)
+        grid-template-columns: 1fr
+        // grid-template-rows: auto 400px
+
+    &__container
+        overflow: hidden

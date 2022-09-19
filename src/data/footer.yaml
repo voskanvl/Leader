@@ -1,0 +1,8 @@
+footer:
+  menu:
+    -
+      title: о компании
+      href: "#"
+    -
+      title: контакты
+      href: "#"

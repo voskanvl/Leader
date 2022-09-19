@@ -1,0 +1,10 @@
+
+ul.side-panel
+    each i in mainMenu 
+        li.side-panel__item
+            a(href= i.href)= i.name
+            if (i.submenu)
+                ul.side-panel__submenu
+                    each j in i.submenu 
+                        li.side-panel__item 
+                            a(href= i.href)= j

@@ -1,0 +1,23 @@
+topMenu:
+  - 
+    name: О компании
+    href: '#'
+  - 
+    name: О продукции
+    href: '#'
+  - 
+    name: Сотрудничество
+    href: '#'
+  - 
+    name: Сертификаты
+    href: '#'
+  - 
+    name: Наши работы
+    href: '#'
+    submenu: 
+        - 
+          name: Name
+          href: href
+  - 
+    name: Контакты
+    href: '#'

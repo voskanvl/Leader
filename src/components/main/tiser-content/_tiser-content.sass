@@ -1,0 +1,28 @@
+.tiser-content
+    padding: 1em
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    @media screen and (max-width: 1024px)
+        align-items: center
+
+    &__title
+        font-family: 'Aquarelle'
+        font-size: min(3.7vw,60px)
+        @media screen and (max-width: 1024px)
+            font-size: clamp(29px, 9vw,60px)
+    &__h1
+        font-family: 'Akrobat'
+        font-size: clamp(38px, 4.9vw,85px)
+        font-weight: bold
+    &__text
+        margin-bottom: 77px
+        font-weight: 300
+        font-size: clamp(14px, 3vw,20px)
+        width: min(551px,30vw)
+        line-height: 141%
+        @media screen and (max-width: 1024px)
+            width: 70%
+        @media screen and (max-width: 440px)
+            width: 100%

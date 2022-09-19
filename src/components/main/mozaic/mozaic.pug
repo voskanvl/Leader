@@ -1,0 +1,5 @@
+include ../../common/panel/panel.pug
+.mozaic
+    each i in mozaic 
+        - const color = i.color || "#fff"
+        +panel(i.type,i.title,i.img)(style=`background:${color};`, class= i.right ? "panel_right" : "")

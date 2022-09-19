@@ -1,0 +1,22 @@
+$min-size: 150px
+.catalogItem
+    width: 136px
+    height: 136px
+    border-radius: 10px
+    box-shadow: 0 10px 12px -5px #0004
+    background: #F4F5F7
+    transition: background .5s
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-inline: 2rem
+    & > svg
+        width: 80%
+        & > path
+            fill: inherit
+    &:hover
+        box-shadow: none
+        background: #7D91A5
+        transition: background .5s
+        & > svg
+            fill: #fff

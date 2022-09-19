@@ -1,0 +1,45 @@
+$offset-flying-in-mobile: 10vw
+.flyingChair
+    margin-inline: auto
+
+    &__container
+        width: 100%
+
+    &__chair
+        background: url("../../../../assets/images/873 1.png") no-repeat
+        background-size: contain
+        height: 800px
+        // width: min(538px,95vw)
+        width: 95%
+        transform-origin: center
+        transform: rotate(24deg)
+        animation: flying 8s linear infinite
+        z-index: 1
+        @media screen and ( max-width: 1024px )
+            height: 94vw
+            width: unset
+            transform: rotate(24deg)
+            margin: $offset-flying-in-mobile 0 0 5vw
+
+    &__shadow
+        width: 512px
+        height: 140px
+        // margin-top: -171px
+        background: #0006
+        filter: blur(20px)
+        border-radius: 50%
+        transform: translateY(-128px)
+        animation: retreating 8s linear infinite
+        @media screen and ( max-width: 1024px )
+            width: 73vw
+            height: unset
+            aspect-ratio: 512/140
+            margin-left: $offset-flying-in-mobile
+
+@keyframes flying
+    50%
+        transform: rotate(20deg) translateY(-50px)
+@keyframes retreating
+    50%
+        transform: scale(0.8) translateY(-128px)
+        filter: blur(40px)

@@ -1,0 +1,10 @@
+mixin panel(type,title,img)
+    .panel&attributes(attributes)
+        .panel__content
+            .panel__title
+                strong= type 
+                span= title
+            a.panel__next.next(href="#") 
+                div Далее
+                img.arrow_180(src="../../../../assets/icons/Arrow 1.png")
+        img.panel__img(src=img)

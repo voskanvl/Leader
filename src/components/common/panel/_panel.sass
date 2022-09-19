@@ -1,0 +1,41 @@
+.panel
+    border-radius: 10px
+    padding: 32px
+    overflow: hidden
+    position: relative
+
+    &__title
+        color: #0A2C50
+        & > *
+            text-transform: uppercase
+            font-size: clamp(14px, 2vw,25px)
+        & > strong
+            padding-right: .3em
+
+    &__img
+        width: 200px
+        position: absolute
+        top: 50%
+        right: -10%
+        // transform: translate(-50%,-50%)
+
+    & .next
+        padding-inline: 0
+        filter: grayscale(1) contrast(10)
+        & > div
+            font-size: 14px
+
+    &__content
+        display: flex
+        flex-direction: column
+        row-gap: 1.25vw
+
+    &_right
+        .panel__content
+            margin-left: 33%
+            @media screen and ( max-width: 1024px )
+                margin-left: 0%
+
+        .panel__img
+            left: -14%
+            top: 36%
