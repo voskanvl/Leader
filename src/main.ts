@@ -18,6 +18,7 @@ splidesInstance.add("#tiser", {
     type: "loop",
     arrows: false,
     pagination: false,
+    perPage: 1,
 });
 
 const tiserControls = document.querySelector(".tiser__controls")?.children;

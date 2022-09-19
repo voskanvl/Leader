@@ -1,7 +1,11 @@
 include ../../common/mixins/splide.pug
 .tiser
     +splide("tiser",tiser)
-        img(src=val.img, width="300px")
+        .tiser__item
+            img.tiser__img(src=val.img)
+            .tiser__content
+                h2.tiser__title= val.title 
+                .tiser__text= val.text
     .tiser__controls 
         .arrow.arrow_180
         .arrow

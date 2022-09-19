@@ -1,18 +1,40 @@
 .tiser
-    display: grid
-    grid-template-columns: 1fr 1fr
-    place-items: start
-    width: min(1200px, 82.5vw)
-    margin-inline: auto
-    margin-bottom: 0px
+    width: min(1180px,95vw)
+    margin: 0 auto
     position: relative
 
-    @media screen and (max-width: 1024px)
-        grid-template-columns: 1fr
-        // grid-template-rows: auto 400px
+    &__item
+        height: 320px
+        overflow: hidden
+        display: flex
+        align-items: flex-end
 
     &__container
         overflow: hidden
 
     &__controls
         display: flex
+        position: absolute
+        z-index: 2
+        width: 100%
+        justify-content: space-between
+        width: min(1226px,95vw)
+        margin: 0 auto
+        top: 50%
+        left: -23px
+        transform: translateY(-50%)
+
+    &__img
+        width: 100%
+
+    &__content
+        position: absolute
+        top: 71px
+        left: 84px
+        z-index: 2
+        width: calc( 387 / 1132 * 100%)
+
+    &__title
+        font-weight: 500
+        font-size: 35px
+        margin-bottom: 17px
