@@ -1,9 +1,8 @@
 @import "../../common/card/_card.sass"
 .card-list
     display: flex
-    width: min(1180px, 95vw)
-    margin: 0 auto
     align-items: center
+    justify-content: center
 
     & #card-list
         // flex: 1
@@ -12,3 +11,8 @@
     & .arrow
         width: 46px
         height: 46px
+        flex: 1
+
+    &__container
+        width: min(1180px, 95vw)
+        margin: 0 auto 80px
