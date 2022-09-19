@@ -5,19 +5,16 @@
     position: relative
 
     &__title
-        color: #0A2C50
-        & > *
-            text-transform: uppercase
-            font-size: clamp(14px, 2vw,25px)
-        & > strong
-            padding-right: .3em
+        color: #fff
+        font-weight: 500
+        font-size: 24px
+        width: min(184px, 184 / 1920 * 100vw)
 
     &__img
-        width: 200px
         position: absolute
-        top: 50%
-        right: -10%
-        // transform: translate(-50%,-50%)
+        inset: 0
+        width: 100%
+        z-index: -1
 
     & .next
         padding-inline: 0

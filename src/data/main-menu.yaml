@@ -2,18 +2,24 @@ mainMenu:
   -
     name: Мебель для детских садов
     href: "#"
+    img: "../../assets/images/mockup-wall-children-s-room-wall-blue-colors.jpg"
   -
     name: Мебель для школы
     href: "#"
+    img: "../../assets/images/classroom-with-school-desks-greenboardempty-school-classroom.jpg"
   -
     name: Мебель для офиса
     href: "#"
+    img: "../../assets/images/minimal-home-office-interior-design-with-fiddle-leaf-fig-plant.jpg"
   -
     name: Мебель для общежития
     href: "#"
+    img: "../../assets/images/minimal-home-office-interior-design-with-fiddle-leaf-fig-plant.jpg"
   -
     name: Мебель для актового зала
     href: "#"
+    img: "../../assets/images/minimal-home-office-interior-design-with-fiddle-leaf-fig-plant.jpg"
   -
     name: Мебель на заказ
     href: "#"
+    img: "../../assets/images/minimal-home-office-interior-design-with-fiddle-leaf-fig-plant.jpg"
