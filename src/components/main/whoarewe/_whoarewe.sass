@@ -1,0 +1,19 @@
+@import "../../common/bgc/_bgc.sass"
+.whoarewe
+    &__container
+        width: min(1180px,95vw)
+        margin: 0 auto
+
+    &__main
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 30px
+
+    &__left
+        & > .whoarewe__par:not(:last-child)
+            margin-bottom: 2em
+
+    &__title
+        margin-bottom: 30px
+        font-weight: 500
+        font-size: 30px
