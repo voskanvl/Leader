@@ -1,0 +1,17 @@
+.contacts
+    display: grid
+    grid-template-columns: calc(975 / 1920 * 100%) calc(945 / 1920 * 100%)
+
+    &__row
+        display: grid
+        grid-template-columns: 71px 1fr 1fr
+        place-items: center start
+        grid-column-gap: 21px
+        width: min(583px,95%)
+        margin-left: auto
+        &:not(:last-child)
+            margin-bottom: 49px
+
+    &__data
+        background: #FFCC00
+        padding: 62px 21px

@@ -4,16 +4,6 @@ import "@splidejs/splide/css";
 import toggleSidePanel from "./toggleSlidePanel";
 
 const splidesInstance = new MSplides();
-// splidesInstance.add("#chairtypes", {
-//     type: "loop",
-//     autoplay: false,
-//     perMove: 1,
-//     direction: "rtl",
-//     arrows: false,
-//     focus: "center",
-//     pagination: false,
-//     autoWidth: true,
-// });
 splidesInstance.add("#tiser", {
     type: "loop",
     arrows: false,

@@ -2,7 +2,7 @@
 .whoarewe
     &__container
         width: min(1180px,95vw)
-        margin: 0 auto
+        margin: 0 auto 80px
 
     &__main
         display: grid
@@ -12,3 +12,15 @@
     &__left
         & > .whoarewe__par:not(:last-child)
             margin-bottom: 2em
+
+    &__icons
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        grid-template-rows: repeat(2,1fr)
+
+    &__row
+        display: flex
+        align-items: center
+        column-gap: 20px
+        font-size: 18px
+        font-weight: 500

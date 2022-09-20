@@ -1,0 +1,12 @@
+mixin row(icon, text0, text1)
+    .contacts__row
+        img.contacts__icon(src=icon)
+        .contacts__text!= text0
+        .contacts__text= text1
+
+.contacts
+    .contacts__data 
+        +row("../../../../assets/icons/pin.svg",common.address, common.address1)
+        +row("../../../../assets/icons/email.svg",common.email)
+        +row("../../../../assets/icons/phone.svg",common.phone+"<br>"+common.phone1)
+    #map

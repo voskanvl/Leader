@@ -3,5 +3,10 @@ h1.whoarewe__title.title Кто мы?
     .whoarewe__left
         each i in whoarewe 
             p.whoarewe__par= i
+        .whoarewe__icons 
+            each i in whoareweIcons
+                .whoarewe__row 
+                    img(src=i.img)
+                    div= i.title
     .whoarewe__right 
         include ../../common/bgc/bgc.pug
