@@ -2,6 +2,9 @@ import "./sass/style.sass";
 import { MSplides } from "./initSlides";
 import "@splidejs/splide/css";
 import toggleSidePanel from "./toggleSlidePanel";
+//--- import assets
+import "../assets/svg/developer.svg";
+import "../assets/svg/logo.svg";
 
 const splidesInstance = new MSplides();
 splidesInstance.add("#tiser", {
