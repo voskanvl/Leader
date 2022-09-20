@@ -8,6 +8,9 @@
         display: grid
         grid-template-columns: repeat(2, 1fr)
         grid-column-gap: 30px
+        @media screen and ( max-width: 1024px )
+            grid-template-columns: 100%
+            grid-row-gap: 30px
 
     &__left
         & > .whoarewe__par:not(:last-child)
