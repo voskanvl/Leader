@@ -1,18 +1,21 @@
 .footer__main 
-        a.logo(href="#")
-            img(src="../../../assets/svg/logo.svg")
-            .long-yellow-line 
-            div фабрика мебели
-        ul.footer.menu 
-            each i in topMenu
-                li.footer__item 
-                    a(href=i.href)= i.name
-        ul.footer.menu 
-            each i in [{name:"Продукция"},...mainMenu]
-                li.footer__item 
-                    a(href=i.href)= i.name
-        .footer__contacts
-            a.footer__phone(href="tel:"+common.phone)= common.phone
-            a.footer__phone(href="tel:"+common.phone1)= common.phone1
-            .footer__address= common.address
+    a.logo(href="#")
+        img(src="../../../assets/svg/logo.svg")
+        .long-yellow-line 
+        div фабрика мебели
+    ul.footer.menu 
+        each i in topMenu
+            li.footer__item 
+                a(href=i.href)= i.name
+    ul.footer.menu 
+        each i in [{name:"Продукция"},...mainMenu]
+            li.footer__item 
+                a(href=i.href)= i.name
+    .footer__contacts
+        a.footer__phone(href="tel:"+common.phone)= common.phone
+        a.footer__phone(href="tel:"+common.phone1)= common.phone1
+        .footer__address= common.address
 
+.footer__down
+    a(href="https://russiaws.ru/")
+        img(src="../../../assets/svg/developer.svg" alt="RUWS")

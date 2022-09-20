@@ -1,5 +1,5 @@
 .footer
-    padding: 40px 0
+    padding-top: 40px
     background: #878786
 
     &__main
@@ -8,6 +8,8 @@
         display: grid
         grid-template-columns: calc(170/1180*100%) calc(132/1180*100%) calc(233/1180*100%) calc(347/1180*100%)
         grid-column-gap: 83px
+        margin-bottom: 70px
+
     &.menu
         padding: 0
         display: flex
@@ -29,3 +31,14 @@
     &__address
         color: #fff
         text-align: right
+
+    &__down
+        border-top: 1px solid #fff
+        height: 59px
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        & > a
+            width: min(1180px, 95vw)
+            margin: 0 auto
+            text-align: right
