@@ -4,6 +4,8 @@
     width: min(1180px, 95vw)
     margin: 0 auto
     padding: 19px 0
+    @media screen and ( max-width: 768px )
+        grid-template-columns: 100%
 
     &__input
         display: flex
@@ -20,16 +22,23 @@
     &__icon
         transform: translateX(0)
         z-index: 1
+
     &__card
         display: flex
         align-items: center
         column-gap: 12px
         margin-right: 78px
+        @media screen and ( max-width: 768px )
+            margin-right: 0
+            & > span
+                display: none
 
     &__contacts
         display: flex
         flex-direction: column
         align-items: flex-end
+        @media screen and ( max-width: 768px )
+            display: none
 
     &__phone
         font-size: 20px
