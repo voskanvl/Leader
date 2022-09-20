@@ -12,6 +12,7 @@
         @media screen and ( max-width: 1024px )
             grid-template-columns: 0.64fr 1fr
             grid-column-gap: 37px
+            grid-row-gap: 40px
 
     &.menu
         padding: 0
@@ -26,7 +27,7 @@
         font-size: 20px
 
     &__phone
-        font-size: clamp(15px, 3vw ,39px)
+        font-size: clamp(30px, 3vw ,39px)
         font-weight: 600
         color: #fff
         display: block
@@ -49,11 +50,11 @@
     &__contacts
         display: flex
         flex-direction: column
-        width: calc(347/1180*100%)
         margin-left: auto
         align-items: end
         @media screen and ( max-width: 1024px )
             grid-area: 3 / 1 / 4 / 3
+            width: 60%
 
     & .logo
         @media screen and ( max-width: 1024px )
