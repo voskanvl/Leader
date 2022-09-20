@@ -25,6 +25,10 @@
     &__row
         display: flex
         align-items: center
-        column-gap: 20px
-        font-size: 18px
+        column-gap: clamp(8px,2.5vw,20px)
+        font-size: clamp(12px, 3.75vw ,18px)
         font-weight: 500
+        & > img
+            @media screen and ( max-width: 1024px )
+                width: 60px
+                height: 60px

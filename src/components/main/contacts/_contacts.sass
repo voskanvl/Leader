@@ -1,6 +1,12 @@
 .contacts
     display: grid
     grid-template-columns: calc(975 / 1920 * 100%) calc(945 / 1920 * 100%)
+    @media screen and ( max-width: 1024px )
+        grid-template-columns: 100%
+        grid-template-rows: repeat(2, 1fr)
+        & > &__data > &__row:first-child > &__text
+            grid-column-start: 2
+            grid-column-end: 3
 
     &__row
         display: grid
@@ -11,7 +17,8 @@
         margin-left: auto
         &:not(:last-child)
             margin-bottom: 49px
-
+        @media screen and ( max-width: 1024px )
+            grid-template-columns: 71px 1fr
     &__data
         background: #FFCC00
         padding: 62px 21px

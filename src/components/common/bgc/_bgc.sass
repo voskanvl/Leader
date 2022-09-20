@@ -36,9 +36,15 @@
         +center
 
 .f100,.f30
-    font-size: 300px
     font-weight: 500
     font-family: Rubik, sans-serif
     line-height: 0.9
+.f100
+    font-size: 300px
+    @media screen and ( max-width: 1024px )
+        font-size: clamp(150px,46.875vw ,300px)
+
 .f30
     font-size: 61px
+    @media screen and ( max-width: 1024px )
+        font-size: clamp(30px,9.375vw ,61px)
