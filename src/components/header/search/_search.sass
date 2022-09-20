@@ -1,0 +1,36 @@
+.search
+    display: grid
+    grid-template-columns: calc(975 / 1180 * 100%) calc((1180 - 975) / 1180 * 100%)
+    width: min(1180px, 95vw)
+    margin: 0 auto
+    padding: 19px 0
+
+    &__input
+        display: flex
+        align-items: center
+        & > input
+            padding-left: 48px
+            border-radius: 20px
+            height: 41px
+            border: none
+            background: #D9D9D9
+            width: 100%
+            transform: translateX(-40px)
+
+    &__icon
+        transform: translateX(0)
+        z-index: 1
+    &__card
+        display: flex
+        align-items: center
+        column-gap: 12px
+        margin-right: 78px
+
+    &__contacts
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+
+    &__phone
+        font-size: 20px
+        font-weight: 600
