@@ -3,7 +3,8 @@ mixin card(val)
         img.card__img(src=val.img, alt=val.name)
         .card__content 
             .card__name= val.name
-            .card__price= val.price
+            - const res = String(val.price).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
+            .card__price!= res +"&#8381;"
         .card__icons
             a.card__look(href="#")
             a.card__card(href="#") 

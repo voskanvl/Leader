@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=9b27ecf5-fac6-419d-b8f5-184a9818db91&lang=ru_RU"
-        type="text/javascript">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://api-maps.yandex.ru/2.1/?apikey=9b27ecf5-fac6-419d-b8f5-184a9818db91&lang=ru_RU"
+            type="text/javascript"
+        ></script>
+        <script type="text/javascript">
+            var map = ymaps.ready(function () {
+                const map = new ymaps.Map("map", {
+                    center: [53.179114, 45.01377],
+                    zoom: 13,
+                });
+                var myPlacemark0 = new ymaps.Placemark([53.179114, 45.01377]);
+                map.geoObjects.add(myPlacemark0);
+                var myPlacemark1 = new ymaps.Placemark([53.167352, 45.03118]);
+                map.geoObjects.add(myPlacemark1);
+                map.behaviors.disable("scrollZoom");
+                map.behaviors.disable("drag");
+            });
         </script>
-    <script type="text/javascript">
-        var map = ymaps.ready(function () {
-            const map = new ymaps.Map("map", {
-                center: [53.179114, 45.013770],
-                zoom: 13
-            })
-            var myPlacemark0 = new ymaps.Placemark([53.179114, 45.013770])
-            map.geoObjects.add(myPlacemark0)
-            var myPlacemark1 = new ymaps.Placemark([53.167352, 45.031180])
-            map.geoObjects.add(myPlacemark1)
-        })
-    </script>
-    <title>Leader</title>
-</head>
+        <title>Leader</title>
+    </head>
 
-<body>
-    <div id="app"></div>
-    <template data-type="pug" data-src="./src/pug/index.pug"></template>
-    <script type="module" src="/src/main.ts" defer></script>
-</body>
-
+    <body>
+        <div id="app"></div>
+        <template data-type="pug" data-src="./src/pug/index.pug"></template>
+        <script type="module" src="/src/main.ts" defer></script>
+    </body>
 </html>

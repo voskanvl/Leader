@@ -16,7 +16,7 @@
         overflow: hidden
         margin: 55px 0
         @media screen and ( max-width: 768px )
-            margin: 0
+            margin: 55px 0 40px
 
     &__controls
         display: flex
@@ -33,10 +33,13 @@
 
     &__img
         width: 100%
+        @media screen and ( max-width: 600px )
+            width: unset
+            height: 100%
 
     &__content
         position: absolute
-        top: 71px
+        top: 32px
         left: 84px
         z-index: 2
         width: calc( 387 / 1132 * 100%)

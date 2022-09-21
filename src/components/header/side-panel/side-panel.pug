@@ -1,5 +1,14 @@
 
 ul.side-panel
+    each i in topMenu 
+        li.side-panel__item
+            a(href= i.href)= i.name
+            if (i.submenu && i.submenu.length)
+                ul.side-panel__submenu
+                    each j in i.submenu 
+                        li.side-panel__item 
+                            a(href= j.href)= j.name
+    hr
     each i in mainMenu 
         li.side-panel__item
             a(href= i.href)= i.name

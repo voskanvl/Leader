@@ -12,9 +12,13 @@
             grid-template-columns: 100%
             grid-row-gap: 30px
 
-    &__left
+    &__text
+        margin-bottom: 31px
         & > .whoarewe__par:not(:last-child)
             margin-bottom: 2em
+        @media screen and ( max-width: 1024px )
+            height: 250px
+            overflow: auto
 
     &__icons
         display: grid

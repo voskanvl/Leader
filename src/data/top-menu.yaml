@@ -16,8 +16,8 @@ topMenu:
     href: '#'
     submenu: 
         - 
-          name: Name
-          href: href
+          name: Очень важная работа
+          href: "#"
   - 
     name: Контакты
     href: '#'
