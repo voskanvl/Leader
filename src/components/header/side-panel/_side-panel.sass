@@ -1,7 +1,7 @@
 .side-panel
     position: absolute
     padding: 1em
-    background: #0F4378aa
+    background: #ffcc00aa
     backdrop-filter: blur(4px)
     border-radius: 0 10px 10px 0
     display: flex
@@ -10,6 +10,7 @@
     transform: translateX(-200%)
     transition: transform .5s
     z-index: 10
+    margin-top: 1em
 
     &[open]
         transform: translateX(0%)
@@ -18,7 +19,7 @@
     &__item
         list-style: none
         & > a
-            color: #fff
+            color: #222
             text-decoration: none
 
     &__submenu
