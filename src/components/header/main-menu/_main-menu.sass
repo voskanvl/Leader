@@ -1,4 +1,5 @@
 @import "./_long-yellow-line"
+@import "@var"
 .main-menu
     padding-bottom: 17px
     background: #878786f0
@@ -8,6 +9,8 @@
         width: min(1180px,95vw)
         margin: 0 auto
         column-gap: 56px
+        align-items: center
+        justify-content: space-between
 
     &__down
         width: min(1180px,95vw)
@@ -16,6 +19,8 @@
     &__menu
         display: flex
         column-gap: min(75px, 75 / 1920 * 100vw)
+        @media screen and ( max-width: $switch-menu-resolution )
+            display: none
 
     &__item
         padding: 46px 0 16px

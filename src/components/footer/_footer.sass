@@ -11,7 +11,7 @@
         margin-bottom: 70px
         @media screen and ( max-width: 1024px )
             grid-template-columns: 0.64fr 1fr
-            grid-column-gap: 37px
+            grid-column-gap: min(3vw,37px)
             grid-row-gap: 40px
 
     &.menu
@@ -55,6 +55,8 @@
         @media screen and ( max-width: 1024px )
             grid-area: 3 / 1 / 4 / 3
             width: 60%
+        @media screen and ( max-width: 513px )
+            width: 100%
 
     & .logo
         @media screen and ( max-width: 1024px )

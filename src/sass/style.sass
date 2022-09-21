@@ -1,4 +1,6 @@
 @import "./_import"
+@import "@var"
+
 *,*::after,*::before
     box-sizing: border-box
     margin: 0
@@ -16,6 +18,7 @@ a
 
 .arrow
     background: url("../../assets/icons/Arrow.svg") no-repeat
+    background-size: contain
     width: 46px
     height: 46px
     cursor: pointer
@@ -82,3 +85,12 @@ a
     margin-bottom: 30px
     font-weight: 500
     font-size: 30px
+
+.burger
+    background: url("../../assets/icons/burger.svg") no-repeat
+    width: 42px
+    height: 25px
+    display: none
+    cursor: pointer
+    @media screen and ( max-width: $switch-menu-resolution )
+        display: block
