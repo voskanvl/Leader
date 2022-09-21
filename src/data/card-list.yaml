@@ -4,7 +4,7 @@ cardList:
       img: "../../assets/images/krovatka_detskaya_oliviya.png"
     - name: Стул Модерн
       price: 5999
-      img: "../../assets/images/chair-modern.avif"
+      img: "../../assets/images/chair-modern.jpg"
     - name: Стол для офиса
       price: 19999
-      img: "../../assets/images/office-table.avif"
+      img: "../../assets/images/office-table.jpg"
