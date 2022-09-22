@@ -61,8 +61,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
-                category: resolve(__dirname, "pages", "category.html"),
-                catalog: resolve(__dirname, "pages", "catalog.html"),
+                category: resolve(__dirname, "category.html"),
+                catalog: resolve(__dirname, "catalog.html"),
             },
         },
     },
