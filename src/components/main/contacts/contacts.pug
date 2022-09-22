@@ -1,14 +1,5 @@
-mixin row(icon, href, text0, text1)
-    a.contacts__row(href=href)
-        img.contacts__icon(src=icon)
-        .contacts__text!= text0
-        .contacts__text= text1
-
 .contacts
     .contacts__data 
-        //- +row("../../../../assets/icons/pin.svg","#",common.address, common.address1)
-        //- +row("../../../../assets/icons/email.svg","mailto:"+common.email,common.email)
-        //- +row("../../../../assets/icons/phone.svg","tel:"+common.phone,common.phone+"<br>"+common.phone1)
         a.contacts__row(href="#")
             img.contacts__icon(src="../../../../assets/icons/pin.svg")
             .contacts__text= common.address
@@ -19,6 +10,6 @@ mixin row(icon, href, text0, text1)
         div.contacts__row
             img.contacts__icon(src="../../../../assets/icons/phone.svg")
             .contacts__text
-                a(href="tel:"+common.phone)(style="display:block;")= common.phone
-                a(href="tel:"+common.phone1)(style="display:block;")= common.phone1
+                a(href="tel:"+common.phone style="display:block;")= common.phone
+                a(href="tel:"+common.phone1 style="display:block;")= common.phone1
     #map
