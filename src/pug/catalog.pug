@@ -3,11 +3,11 @@ include ../components/common/card/card.pug
 include ../components/common/crumbs/crumbs.pug
 block main
     .catalog
-        +crumbs("Мебель для школы","#")
+        +crumbs([{name:"Мебель для школы",href:"#"},{name:"Мебель для библиотек",href:"#"}])
         h1.mozaic__title.title Мебель для школы
-        .category__sort 
+        .catalog__sort 
             span Сортировать:
-            select(name="category")  
+            select(name="catalog")  
                 option(value="0") по артикулу
                 option(value="1") по названию
                 option(value="2") по цене

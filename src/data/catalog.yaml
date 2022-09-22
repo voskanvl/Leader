@@ -2,24 +2,32 @@ catalog:
     - name: Библиотечный стол кафедра
       price: 9999
       img: "../../assets/images/catalog/catalog1.jpg"
+      article: 1111
     - name: Библиотечный стол барьер
       price: 5999
       img: "../../assets/images/catalog/catalog1.jpg"
+      article: 1111
     - name: Библиотечный шкаф картотечный
       price: 19999
       img: "../../assets/images/catalog/catalog1.jpg"
+      article: 1111
     - name: Библиотечный шкаф для формуляров
       price: 19999
       img: "../../assets/images/catalog/catalog1.jpg"
+      article: 1111
     - name: Библиотечный односторонний стеллаж
       price: 9999
       img: "../../assets/images/catalog/catalog2.jpg"
+      article: 1111
     - name: Библиотечный двустосторонний стеллаж
       price: 5999
       img: "../../assets/images/catalog/catalog2.jpg"
+      article: 1111
     - name: Библиотечный двустосторонний стеллаж из ЛДСП
       price: 19999
       img: "../../assets/images/catalog/catalog2.jpg"
+      article: 1111
     - name: Библиотечный стеллаж с полками
       price: 19999
       img: "../../assets/images/catalog/catalog2.jpg"
+      article: 1111

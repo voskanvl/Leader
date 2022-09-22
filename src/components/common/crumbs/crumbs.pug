@@ -1,6 +1,7 @@
-mixin crumbs(item, href)
+mixin crumbs(arr)
     ul.crumbs 
         li.crumbs__main
             a(href="/") Главная
-        li.crumbs__item
-            a(href=href)= item
+        each i in arr
+            li.crumbs__item
+                a(href=i.href)= i.name

@@ -3,7 +3,7 @@ include ../components/common/panel/panel.pug
 include ../components/common/crumbs/crumbs.pug
 block main
     .category
-        +crumbs("Мебель для школы","#")
+        +crumbs([{name:"Мебель для школы",href:"#"}])
         h1.mozaic__title.title Мебель для школы
         .mozaic
             each i in category 
