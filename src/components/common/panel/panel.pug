@@ -1,9 +1,9 @@
-mixin panel(title,img)
+mixin panel(title,img, href)
     .panel&attributes(attributes)
         img.panel__img(src=img)
         .panel__curtain
         .panel__title
             span= title
-        a.panel__next.next(href="#") 
+        a.panel__next.next(href=href) 
             div Перейти
             img.arrow_180(src="../../../../assets/icons/Arrow 1.png")
