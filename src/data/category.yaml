@@ -1,0 +1,25 @@
+category:
+  -
+    name: Мебель для библиотек
+    href: "#"
+    img: "../../assets/images/category/biblio.jpg"
+  -
+    name: Мебель для гардеробов
+    href: "#"
+    img: "../../assets/images/category/garderob.jpg"
+  -
+    name: Мебель для специальных и компьютерных классов
+    href: "#"
+    img: "../../assets/images/category/comproom.jpg"
+  -
+    name: Учительские столы
+    href: "#"
+    img: "../../assets/images/category/teachertable.jpg"
+  -
+    name: Школьные парты
+    href: "#"
+    img: "../../assets/images/category/desks.jpg"
+  -
+    name: Школьные стулья
+    href: "#"
+    img: "../../assets/images/category/school_chairs.jpg"

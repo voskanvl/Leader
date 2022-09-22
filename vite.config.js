@@ -61,7 +61,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
-                // second: resolve(__dirname, "second.html"),
+                category: resolve(__dirname, "category.html"),
             },
         },
     },

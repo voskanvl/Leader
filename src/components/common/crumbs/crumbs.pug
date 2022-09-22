@@ -1,0 +1,6 @@
+mixin crumbs(item, href)
+    ul.crumbs 
+        li.crumbs__main
+            a(href="/") Главная
+        li.crumbs__item
+            a(href=href)= item

@@ -1,0 +1,10 @@
+extends ./leader-template.pug
+include ../components/common/panel/panel.pug
+include ../components/common/crumbs/crumbs.pug
+block main
+    .category
+        +crumbs("Мебель для школы","#")
+        h1.mozaic__title.title Мебель для школы
+        .mozaic
+            each i in category 
+                +panel(i.name,i.img)

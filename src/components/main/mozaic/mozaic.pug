@@ -2,5 +2,4 @@ include ../../common/panel/panel.pug
 h1.mozaic__title.title Наша продукция
 .mozaic
     each i in mainMenu 
-        - const color = i.color || "#fff"
         +panel(i.name,i.img)
