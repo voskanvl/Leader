@@ -7,7 +7,8 @@
         "dev": "vite  --host",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "createComponent": " bash ./create-component.bash"
+        "createComponent": " bash ./create-component.bash",
+        "tar": "tar -czvf leader.tar.gz ./dist"
     },
     "devDependencies": {
         "fast-glob": "^3.2.11",
