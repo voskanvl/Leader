@@ -1,0 +1,16 @@
+extends ./leader-template.pug
+include ../components/common/card/card.pug
+include ../components/common/crumbs/crumbs.pug
+block main
+    .catalog
+        +crumbs("Мебель для школы","#")
+        h1.mozaic__title.title Мебель для школы
+        .category__sort 
+            span Сортировать:
+            select(name="category")  
+                option(value="0") по артикулу
+                option(value="1") по названию
+                option(value="2") по цене
+        .mozaic
+            each i in catalog 
+                +card(i)
