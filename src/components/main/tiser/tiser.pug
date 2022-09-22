@@ -1,7 +1,7 @@
 include ../../common/mixins/splide.pug
 .tiser
     +splide("tiser",tiser)
-        .tiser__item
+        a.tiser__item(href=val.href)
             img.tiser__img(src=val.img)
             .tiser__content
                 h2.tiser__title= val.title 
