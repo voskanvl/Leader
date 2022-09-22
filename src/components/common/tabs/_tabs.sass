@@ -1,2 +1,20 @@
 .tabs
     display: flex
+    position: relative
+
+    &__button
+        border-radius: 10px 10px 0 0
+        border: 1px solid #878786
+        border-bottom: none
+        padding: 12.5px 15.5px
+        cursor: pointer
+        user-select: none
+        &[active]
+            background: #EC9704
+            color: #fff
+            border: none
+
+    &__item
+        display: none
+        &[active]
+            display: block

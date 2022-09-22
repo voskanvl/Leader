@@ -1,7 +1,6 @@
 extends ./leader-template.pug
 include ../components/common/card/card.pug
 include ../components/common/crumbs/crumbs.pug
-include ../components/common/tabs/tabs.pug
 block main
     .shop-card
         +crumbs([{name:"Корзина",href:"/card.html"}])
@@ -9,13 +8,12 @@ block main
         img.shop-card__img(src="../../assets/svg/empty-card.svg" alt="empty card")
         .shop-card__text В вашей коризине пока нет товаров...
         a.shop-card__button(href="/catalog.html") Перейти в каталог
-        +tabs([{title:"Характеристики", id:0},{title:"Описание", id:1}])
-        block content 
-            .tab(data-id=0)
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sequi natus qui doloribus recusandae sed dolor officiis ipsum sit consequatur.
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, veritatis.
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore ex dolores architecto. Voluptatum corrupti dignissimos animi ea temporibus illo aliquid.
-            .tab(data-id=1)
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sequi natus qui doloribus recusandae sed dolor officiis ipsum sit consequatur.
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, veritatis.
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur inventore ex dolores architecto. Voluptatum corrupti dignissimos animi ea temporibus illo aliquid.
+        .tabs
+            each i,idx in tabs
+                a.tabs__button(href="#" data-id=i.id, active= idx===0)= i.title
+        .tabs__content
+            .tabs__item(data-id='0' active)
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, et!   
+            .tabs__item(data-id='1')
+                h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, et!   
+            

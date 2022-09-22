@@ -2,15 +2,18 @@ import "./sass/style.sass"
 import { MSplides } from "./initSlides"
 import "@splidejs/splide/css"
 import toggleSidePanel from "./toggleSlidePanel"
+import { Tabs } from "./tabs"
 
 const splidesInstance = new MSplides()
-splidesInstance.add("#tiser", {
+const tiserEl = document.querySelector("#tiser")
+const cardListEl = document.querySelector("#card-list")
+tiserEl && splidesInstance.add("#tiser", {
     type: "loop",
     arrows: false,
     pagination: false,
     perPage: 1,
 })
-splidesInstance.add("#card-list", {
+cardListEl && splidesInstance.add("#card-list", {
     type: "loop",
     arrows: false,
     pagination: false,
@@ -36,5 +39,7 @@ cardListControls.length === 2 &&
     cardListControls[1].addEventListener("click", () =>
         splidesInstance.instances["#card-list"].go(">"),
     )
+
+new Tabs(".tabs__button", ".tabs__item")
 
 toggleSidePanel(".side-panel", "#burger")
