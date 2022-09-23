@@ -1,9 +1,17 @@
 .material
 
+    &__title
+        font-size: 20px
+        color: #3C3C3C
+        font-weight: 400
+        margin-bottom: 10px
+
     &__item
-        display: flex
+        display: grid
+        grid-template-columns: 20px 1fr
         column-gap: 8px
         align-items: center
+        width: min(357px, 95%)
 
     &__panel
         display: flex
@@ -15,6 +23,7 @@
         position: relative
 
         & > input
+            cursor: pointer
             position: absolute
             z-index: 1
             opacity: 0

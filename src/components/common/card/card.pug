@@ -2,9 +2,10 @@ mixin card(val)
     .card 
         img.card__img(src=val.img, alt=val.name)
         .card__content 
-            .card__article
-                span Артикул:
-                span= val.article
+            if (val.article)
+                .card__article
+                    span Артикул:
+                    span= val.article
             .card__name= val.name
             - const res = String(val.price).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
             .card__price!= res +"&#8381;"

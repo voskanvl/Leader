@@ -3,6 +3,7 @@ include ../components/common/card/card.pug
 include ../components/common/crumbs/crumbs.pug
 include ../components/common/tabs/tabs.pug
 include ../components/common/galary/galary.pug
+include ../components/common/mixins/splide.pug
 block main
     +crumbs([{name:"Категории",href:"/category.html"},{name:"Каталог",href:"/catalog.html"},{name:"Продукт",href:"/product.html"}])
     .product
@@ -18,7 +19,7 @@ block main
                     .product__previous-price!= String(product.price.previous).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')+"&#8381"             
                     .product__current-price!= String(product.price.current).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')+"&#8381"          
                 .pruduct__material.material 
-                    .material-title Материал:
+                    h2.material__title Материал:
                     ul.material__list
                         each i in product.materials
                             li.material__item
@@ -28,6 +29,13 @@ block main
                                 .material__panel
                                     img(src="", alt="material sort")
                                     .material__name= i
+                .product__size
+                    h2.size__title Размер:
+                    select(name="material")
+                        each i,idx in product.sizes
+                            option(value=idx)= i
+
+
 
         +tabs(tabs)
             .tabs__item(data-id='0' active)
@@ -36,4 +44,10 @@ block main
                 div 90890809809
             .tabs__item(data-id='2')
                 div материал
+        
+        .card-list 
+            .arrow.arrow_180 
+            +splide("card-list", cardList)
+                +card(val)
+            .arrow
 
