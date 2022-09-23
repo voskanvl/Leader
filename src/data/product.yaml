@@ -8,3 +8,11 @@ product:
       small: "../../assets/images/product/3small.jpg"
     - big: "../../assets/images/product/4.jpg"
       small: "../../assets/images/product/4small.jpg"
+  article: 4876187264
+  price:
+    previous: 19999
+    current: 9999
+  materials: 
+    - ЛДСП (Цветной тон)
+    - ЛДСП (Древесный тон)
+    - Пластик Бук
