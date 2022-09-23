@@ -1,7 +1,7 @@
 tabs:
   - id: 0
     title: Характеристики
-    content: ".tabs__content[data-id='0']" 
   - id: 1
     title: Описание
-    content: ".tabs__content[data-id='1']" 
+  - id: 2
+    title: Материал

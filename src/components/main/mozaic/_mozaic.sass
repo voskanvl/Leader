@@ -1,3 +1,4 @@
+@import "@var"
 .mozaic
     display: grid
     grid-template-columns: repeat(auto-fill, minmax(288px, 1fr))
@@ -6,5 +7,4 @@
     margin-bottom: 100px
 
     &__container
-        width: min(1180px,95vw)
-        margin-inline: auto
+        +wid

@@ -1,8 +1,8 @@
+@import "@var"
 .search
     display: grid
     grid-template-columns: calc(975 / 1180 * 100%) calc((1180 - 975) / 1180 * 100%)
-    width: min(1180px, 95vw)
-    margin: 0 auto
+    +wid
     padding: 19px 0
     @media screen and ( max-width: 768px )
         grid-template-columns: 100%

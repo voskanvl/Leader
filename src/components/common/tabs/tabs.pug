@@ -1,2 +1,9 @@
-
-       
+mixin tabs(tabs)
+    .tabs
+        each i,idx in tabs
+            a.tabs__button(href="#" data-id=i.id, active= idx===0)= i.title
+    .tabs__content
+        block
+        
+           
+        

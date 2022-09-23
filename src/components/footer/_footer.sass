@@ -1,10 +1,10 @@
+@import "@var"
 .footer
     padding-top: 40px
     background: #878786
 
     &__main
-        width: min(1180px, 95vw)
-        margin: 0 auto
+        +wid
         display: grid
         grid-template-columns: calc(170/1180*100%) calc(132/1180*100%) calc(233/1180*100%) 1fr
         grid-column-gap: 83px
@@ -47,8 +47,7 @@
         align-items: center
         justify-content: flex-end
         & > a
-            width: min(1180px, 95vw)
-            margin: 0 auto
+            +wid
             text-align: right
 
     &__contacts
