@@ -2,13 +2,17 @@ extends ./leader-template.pug
 include ../components/common/card/card.pug
 include ../components/common/crumbs/crumbs.pug
 include ../components/common/tabs/tabs.pug
+include ../components/common/galary/galary.pug
 block main
     +crumbs([{name:"Категории",href:"/category.html"},{name:"Каталог",href:"/catalog.html"},{name:"Продукт",href:"/product.html"}])
     .product
-        h1.shop-card__title.title Корзина
-        img.shop-card__img(src="../../assets/svg/empty-card.svg" alt="empty card")
-        .shop-card__text В вашей коризине пока нет товаров...
-        a.shop-card__button(href="/catalog.html") Перейти в каталог
+        h1.product__title.title Библиотечный стол кафедра
+        .product__data
+            .product__left
+                +galary(product.galary)
+            .product__right 
+                div Anything
+            
         +tabs(tabs)
             .tabs__item(data-id='0' active)
                 div kjlksdjlksjdf

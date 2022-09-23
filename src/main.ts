@@ -3,6 +3,7 @@ import { MSplides } from "./initSlides"
 import "@splidejs/splide/css"
 import toggleSidePanel from "./toggleSlidePanel"
 import { Tabs } from "./tabs"
+import { Galary } from './galary'
 
 const splidesInstance = new MSplides()
 const tiserEl = document.querySelector("#tiser")
@@ -40,6 +41,15 @@ cardListControls.length === 2 &&
         splidesInstance.instances["#card-list"].go(">"),
     )
 
-new Tabs(".tabs__button", ".tabs__item")
+if (location.pathname === "/product.html"){
+    new Tabs(".tabs__button", ".tabs__item")
+    const arr = [
+        {big: "../../assets/images/product/1.jpg"},
+        {big: "../../assets/images/product/2.jpg"},
+        {big: "../../assets/images/product/3.jpg"},
+        {big: "../../assets/images/product/4.jpg"},
+   ]
+    new Galary(".galary__big > img",".galary__thumbnail", arr)
+}
 
 toggleSidePanel(".side-panel", "#burger")

@@ -1,0 +1,10 @@
+product:
+  galary: 
+    - big: "../../assets/images/product/1.jpg"
+      small: "../../assets/images/product/1small.jpg"
+    - big: "../../assets/images/product/2.jpg"
+      small: "../../assets/images/product/2small.jpg"
+    - big: "../../assets/images/product/3.jpg"
+      small: "../../assets/images/product/3small.jpg"
+    - big: "../../assets/images/product/4.jpg"
+      small: "../../assets/images/product/4small.jpg"
