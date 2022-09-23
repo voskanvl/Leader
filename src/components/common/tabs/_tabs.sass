@@ -1,20 +1,32 @@
 .tabs
     display: flex
     position: relative
+    column-gap: 4px
+
+    & > a:hover
+        color: #000
 
     &__button
-        border-radius: 10px 10px 0 0
-        border: 1px solid #878786
-        border-bottom: none
+        border-radius: 7px 7px 0 0
         padding: 12.5px 15.5px
         cursor: pointer
         user-select: none
+        background: #EC9704
+        border: none
         &[active]
-            background: #EC9704
-            color: #fff
-            border: none
+            background: #fff
+            color: black
+            border: 1px solid #878786
+            border-bottom: none
+            transform: translateY(1px)
 
     &__item
         display: none
         &[active]
             display: block
+
+    &__content
+        border-radius: 0 0 7px 7px
+        border: 1px solid #878786
+        // border-top: none
+        padding: 30px 15.5px
