@@ -28,7 +28,7 @@
         width: 95%
         margin: 0 auto
 
-    &__data
+    &__data, &__article[data-id="0"]
         display: flex
         flex-direction: column
         row-gap: 20px
@@ -45,3 +45,6 @@
         text-align: right
         font-weight: 500
         font-size: 25px
+
+    &__article
+        display: none

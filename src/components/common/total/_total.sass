@@ -1,5 +1,10 @@
 @import "./_check"
 .total
+    width: min(590px, 95%)
+
+    &__title
+        font-size: 20px
+        color: #3C3C3C
 
     &__main
         display: flex
@@ -12,3 +17,17 @@
     &__check
         position: relative
         width: 237px
+
+    &__footer
+        display: flex
+        column-gap: 13px
+        & a
+            color: #FFA800
+            &:hover
+                color: #FFA800
+
+    &__footer
+        & > button.button
+            background: #EC9704
+            color: #fff
+            padding: 13px 37px
