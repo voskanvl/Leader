@@ -2,12 +2,18 @@ extends ./leader-template.pug
 include ../components/common/card/card.pug
 include ../components/common/crumbs/crumbs.pug
 include ../components/common/tabs/tabs.pug
+include ../components/common/accordion/accordion.pug
 block main
     .shop-card
         +crumbs([{name:"Корзина",href:"/card.html"}])
         h1.shop-card__title.title Корзина
-        img.shop-card__img(src="../../assets/svg/empty-card.svg" alt="empty card")
-        .shop-card__text В вашей коризине пока нет товаров...
-        a.shop-card__button(href="/catalog.html") Перейти в каталог
+        .shop-card__main
+            .shop-card__accordion
+                +accordion(["Корзина","Ваши данные","Завершение"])
+            .shop-card__data
+
+                img.shop-card__img(src="../../assets/svg/empty-card.svg" alt="empty card")
+                .shop-card__text В вашей коризине пока нет товаров...
+                a.shop-card__button(href="/catalog.html") Перейти в каталог
         
 
