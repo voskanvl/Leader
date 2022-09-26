@@ -11,7 +11,7 @@ block main
         .product__data
             .product__left
                 +galary(product.galary)
-            .product__right 
+            form.product__right 
                 .product__article 
                     span Артикул: 
                     span= product.article
@@ -21,13 +21,12 @@ block main
                 .pruduct__material.material 
                     h2.material__title Материал:
                     ul.material__list
-                        each i in product.materials
+                        each i,idx in product.materials
                             li.material__item
-                                .material__input
-                                    input(type="radio", name="material")
-                                    .material__inner
+                                input(type="radio", name="material", data-id=idx, checked=idx === 0)
+                                .material__inner
                                 .material__panel
-                                    img(src="", alt="material sort")
+                                    img(src="../../assets/icons/material.png", alt="material sort")
                                     .material__name= i
                 .product__size
                     h2.size__title Размер:
@@ -37,13 +36,14 @@ block main
 
 
 
-        +tabs(tabs)
-            .tabs__item(data-id='0' active)
-                div kjlksdjlksjdf
-            .tabs__item(data-id='1')
-                div 90890809809
-            .tabs__item(data-id='2')
-                div материал
+        .tabs__container
+            +tabs(tabs)
+                .tabs__item(data-id='0' active)
+                    div kjlksdjlksjdf
+                .tabs__item(data-id='1')
+                    div 90890809809
+                .tabs__item(data-id='2')
+                    div материал
         
         .card-list 
             .arrow.arrow_180 
