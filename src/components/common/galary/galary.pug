@@ -4,4 +4,4 @@ mixin galary(arr)
             img(src=arr[0].big alt="big img")
         .galary__thumbnails
             each i,idx in arr 
-                img.galary__thumbnail(src=i.small, alt="small img", data-id=idx)
+                img.galary__thumbnail(src=i.small, alt="small img", data-id=idx, big=i.big)

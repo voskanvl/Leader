@@ -42,17 +42,32 @@ cardListControls.length === 2 &&
         splidesInstance.instances["#card-list"].go(">"),
     )
 
-if (location.pathname === "/product.html"){
-    new Tabs(".tabs__button", ".tabs__item")
-    const arr = [
-        {big: "../../assets/images/product/1.jpg"},
-        {big: "../../assets/images/product/2.jpg"},
-        {big: "../../assets/images/product/3.jpg"},
-        {big: "../../assets/images/product/4.jpg"},
-   ]
-    new Galary(".galary__big > img",".galary__thumbnail", arr)
+new Tabs(".tabs__button", ".tabs__item")
+new Galary(".galary__big > img", ".galary__thumbnail")
 
-    new Counter(".counter")
-}
+new Counter(".counter")
 
 toggleSidePanel(".side-panel", "#burger")
+
+const shopCardData = document.querySelector(".shop-card__article[data-id='0']")
+if (shopCardData) {
+    const { height } = shopCardData.getBoundingClientRect()
+    console.log("🚀 ~ height", height)
+    const rule = document.createElement("style")
+    rule.innerHTML = `section.accordion__section:nth-child(1) > div[class='accordion__body']{height: ${height}px !important;}`
+    document.head.append(rule)
+
+    const button = document.querySelector(".shop-card__data > button.button, .shop-card__article[data-id='0'] > button.button")
+    const sign = document.querySelector(".accordion__section:nth-child(2) > .accordion__trigger > .accordion__sign")
+    const article1 = document.querySelector(".shop-card__article[data-id='1']")
+    if (button) {
+        button.addEventListener("click", () => {
+            if (sign && article1) {
+                (sign as HTMLElement).style.background = "#FFCC00";
+                (article1 as HTMLElement).style.display = "flex"
+
+            }
+
+        })
+    }
+}
