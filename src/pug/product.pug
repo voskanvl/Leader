@@ -4,6 +4,7 @@ include ../components/common/crumbs/crumbs.pug
 include ../components/common/tabs/tabs.pug
 include ../components/common/galary/galary.pug
 include ../components/common/mixins/splide.pug
+include ../components/common/counter/counter.pug
 block main
     +crumbs([{name:"Категории",href:"/category.html"},{name:"Каталог",href:"/catalog.html"},{name:"Продукт",href:"/product.html"}])
     .product
@@ -28,13 +29,15 @@ block main
                                 .material__panel
                                     img(src="../../assets/icons/material.png", alt="material sort")
                                     .material__name= i
-                .product__size
-                    h2.size__title Размер:
-                    select(name="material")
-                        each i,idx in product.sizes
-                            option(value=idx)= i
+                    .product__size
+                        h2.size__title Размер:
+                        select(name="material")
+                            each i,idx in product.sizes
+                                option(value=idx)= i
 
-
+                    .product__control 
+                        +counter
+                        button.product__button.button В корзину
 
         .tabs__container
             +tabs(tabs)
