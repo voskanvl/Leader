@@ -63,6 +63,7 @@ export default defineConfig({
                 main: resolve(__dirname, "index.html"),
                 category: resolve(__dirname, "category.html"),
                 catalog: resolve(__dirname, "catalog.html"),
+                product: resolve(__dirname, "product.html"),
             },
         },
     },
