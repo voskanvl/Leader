@@ -1,3 +1,4 @@
+import { Counter } from './counter'
 import "./sass/style.sass"
 import { MSplides } from "./initSlides"
 import "@splidejs/splide/css"
@@ -50,6 +51,8 @@ if (location.pathname === "/product.html"){
         {big: "../../assets/images/product/4.jpg"},
    ]
     new Galary(".galary__big > img",".galary__thumbnail", arr)
+
+    new Counter(".counter")
 }
 
 toggleSidePanel(".side-panel", "#burger")

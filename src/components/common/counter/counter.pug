@@ -1,5 +1,6 @@
-mixin counter 
+mixin counter(name) 
     .counter 
-        button.counter__inc +
-        span.counter__display 0
-        button.counter__dec -
+        input(type="number", name=name)
+        button.counter__inc#inc +
+        span.counter__display#display 0
+        button.counter__dec#dec -
