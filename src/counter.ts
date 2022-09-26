@@ -1,5 +1,5 @@
 export class Counter{
-    private _value:number=0;
+    private _value:number=1;
     private incEl:HTMLElement|null = null
     private decEl:HTMLElement|null = null
     private display:HTMLElement|null = null
@@ -35,6 +35,7 @@ export class Counter{
         return this._value
     }
     set value(x:number){
+        if(x<1) return
         this._value=x
         if(this.display) this.display.innerHTML=String(this._value)
         if(this.input) this.input.value=String(this._value)

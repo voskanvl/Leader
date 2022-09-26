@@ -5,6 +5,8 @@
         display: grid
         grid-template-columns: 506fr 625fr
         grid-column-gap: 50px
+        @media screen and ( max-width: 768px )
+            grid-template-columns: 1fr
 
     &__price
         display: flex
@@ -39,6 +41,9 @@
 
     &__control
         padding: 30px 0
-        display: grid
-        grid-template-columns: repeat(2,1fr)
-        grid-column-gap: 31px
+        // display: grid
+        // grid-template-columns: repeat(2,1fr)
+        // grid-column-gap: 31px
+        column-gap: clamp(5px,1.56vw,31px)
+        display: flex
+        justify-content: space-between

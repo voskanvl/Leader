@@ -1,0 +1,16 @@
+.carachteristics
+    display: flex
+    column-gap: min(2.7vw,52px)
+    @media screen and ( max-width: 768px )
+        flex-direction: column
+        row-gap: 2em
+
+    &__row
+        display: flex
+
+    &__key
+        width: 200px
+        white-space: pre
+        overflow: hidden
+        &::after
+            content: "......................................."

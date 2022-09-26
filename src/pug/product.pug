@@ -42,9 +42,22 @@ block main
         .tabs__container
             +tabs(tabs)
                 .tabs__item(data-id='0' active)
-                    div kjlksdjlksjdf
+                    .carachteristics
+                        .carachteristics__left 
+                            each i in carachteristics
+                                .carachteristics__row
+                                    .carachteristics__key= i.name
+                                    .carachteristics__value= i.value
+                        .carachteristics__left Варинат ростовки можно выбрать в поле “Размер”
+
+
                 .tabs__item(data-id='1')
-                    div 90890809809
+                    p 
+                        |Каркас стола выполнен из круглой трубы с нанесением порошкового покрытия светло-серого цвета. Концы труб закрываются пластмассовыми заглушками.
+                        |Столешница с закругленными углами выполнена из ЛДСП или влагостойкого пластика цвета Бук, края обработаны кромкой ПВХ 2 мм.
+                    p
+                        |При изготовлении используются только сертифицированные и безопасные для детей материалы.
+                        |С вариантами материалов и расцветок можно ознакомиться на странице Материалы
                 .tabs__item(data-id='2')
                     div материал
         

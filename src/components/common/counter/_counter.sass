@@ -5,13 +5,14 @@
     display: flex
     align-items: center
     justify-content: space-between
+    width: 171px
 
     &__inc,&__dec
         border-radius: none
         cursor: pointer
         background: none
         border: none
-        font-size: 18px
+        font-size: clamp(12px, 3.75vw, 18px)
 
     & > input
         display: none

@@ -16,6 +16,7 @@
         user-select: none
         background: #EC9704
         border: none
+        font-size: clamp(10px,3.125vw,16px)
         &[active]
             background: #fff
             color: black
@@ -25,8 +26,12 @@
 
     &__item
         display: none
+        font-size: 14px
         &[active]
             display: block
+
+        & > p
+            margin-bottom: 1em
 
     &__content
         border-radius: 0 0 7px 7px
