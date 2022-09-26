@@ -1,0 +1,20 @@
+include ../counter/counter.pug
+mixin cardItem(item)
+    .card-item
+        img.card-item__img(src=item.img, alt="item image")
+        .card-item__content 
+            .card-item__name= item.name 
+            .card-item__param 
+                .card-item__key= item.key+":"
+                .card-item__value= item.value
+        .card-item__amount 
+            +counter("counter")
+            .card-item__price
+                div 
+                    span Цена товара: 
+                    span
+                        strong!= String(item.price).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 ")+"&#8381;"
+        .card-item__total 
+            div 
+                span Итого: 
+                span.card-item__score!= String(item.score).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 ")+"&#8381;"

@@ -1,0 +1,22 @@
+cardItems:
+  - img: "../../assets/images/catalog/catalog1.jpg"
+    name: Библиотечный стол кафедра
+    key: Размеры столешницы
+    value: 1100х550 мм
+    price: 9999
+    score: 9999
+    amount: 10
+  - img: "../../assets/images/catalog/catalog2.jpg"
+    name: Вешалка гардеробная напольная 36 мест
+    key: Размеры столешницы
+    value: 1100х550 мм
+    price: 19999
+    score: 19999
+    amount: 9
+  - img: "../../assets/images/catalog/catalog2.jpg"
+    name: Стол детский регулируемый "Ромашка" 3-х секционный
+    key: Размеры столешницы
+    value: 1100х550 мм
+    price: 29999
+    score: 29999
+    amount: 1

@@ -2,9 +2,9 @@ mixin accordion(val)
     .accordion 
         each i,idx in val
             section.accordion__section 
-                input(type="checkbox", name="trigger")
-                .accordion__trigger(status="done")
+                input(type="checkbox", name="trigger", checked=!!i.done)
+                .accordion__trigger(status=i.done)
                     .accordion__sign= idx+1 
-                    .accordion__name= i
+                    .accordion__name= i.name
 
                 .accordion__body

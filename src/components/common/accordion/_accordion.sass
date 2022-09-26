@@ -5,7 +5,6 @@ $height_body_min: 70px
         display: flex
         align-items: center
         column-gap: 14px
-        cursor: pointer
 
         &[status="done"] > .accordion__sign
             background: #FFCC00
@@ -38,6 +37,7 @@ $height_body_min: 70px
             inset: 0
             z-index: 2
             opacity: 0
+            cursor: pointer
 
         &:not(:last-child)
             & > input:checked ~  .accordion__body

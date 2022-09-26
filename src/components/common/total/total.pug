@@ -1,0 +1,28 @@
+.total 
+    h2.total__title Проверьте правильность данных и отправьте заявку
+    .total__main 
+        .total__check
+            img(src="../../../../assets/images/check.png", alt="check")
+            .check
+                h2.check__total ИТОГО 
+                p.check__cut
+                .check__sb 
+                    span Дата:
+                    span мм/дд/гггг
+                .check__data
+                    each i in cardItems
+                        .check__item 
+                            .check__name= i.name 
+                            .check__row
+                                .check__amount= i.amount+" шт." 
+                                div.check__plug
+                                .check__score!= String(i.price).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 ")+"&#8381;"
+                .check__thanks Спасибо за покупку!
+        .total__chair 
+            img(src="../../../../assets/svg/empty-card.svg", alt="chair")
+    .total__footer 
+        button.button Отправить
+        .total__disclaimer 
+            |Нажимая на кнопку, вы даете согласие на обработку
+            |персональных данных и соглашаетесь c 
+            a(href="#") политикой конфиденциальности.

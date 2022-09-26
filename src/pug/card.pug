@@ -3,17 +3,29 @@ include ../components/common/card/card.pug
 include ../components/common/crumbs/crumbs.pug
 include ../components/common/tabs/tabs.pug
 include ../components/common/accordion/accordion.pug
+include ../components/common/card-item/card-item.pug
 block main
     .shop-card
         +crumbs([{name:"Корзина",href:"/card.html"}])
         h1.shop-card__title.title Корзина
         .shop-card__main
             .shop-card__accordion
-                +accordion(["Корзина","Ваши данные","Завершение"])
+                +accordion([
+                    {name:"Корзина",done:"done"},
+                {name:"Ваши данные"},
+                {name:"Завершение"}
+                ])
             .shop-card__data
+                each i in cardItems 
+                    +cardItem(i)
+                .shop-card__topay Итого к оплате: 
+                    span!= String(200999).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 ")+"&#8381;"
+                button.button Оформить 
+                include ../components/common/contact-form/contact-form.pug
+                include ../components/common/total/total.pug
 
-                img.shop-card__img(src="../../assets/svg/empty-card.svg" alt="empty card")
-                .shop-card__text В вашей коризине пока нет товаров...
-                a.shop-card__button(href="/catalog.html") Перейти в каталог
+            img.shop-card__img(src="../../assets/svg/empty-card.svg" alt="empty card")
+            .shop-card__text В вашей коризине пока нет товаров...
+            a.shop-card__button(href="/catalog.html") Перейти в каталог
         
 
