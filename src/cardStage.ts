@@ -69,6 +69,7 @@ export class CardStage {
             if (text) text.innerHTML = `Ваша заявка успешно отправлена!`
             if (button) button.setAttribute("open", "open")
             if (img) img.setAttribute("open", "open")
+            window.scrollTo({ top: 0 })
         }
     }
     setHeightFirstAccordion() {
