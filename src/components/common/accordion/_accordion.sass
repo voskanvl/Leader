@@ -1,13 +1,10 @@
-$height_body: 200px
+$height_body: 353px
 $height_body_min: 70px
 .accordion
     &__trigger
         display: flex
         align-items: center
         column-gap: 14px
-
-        &[status="done"] > .accordion__sign
-            background: #FFCC00
 
     &__sign
         background: #878786
@@ -17,6 +14,7 @@ $height_body_min: 70px
         display: grid
         place-items: center
         font-size: 30px
+        transition: background-color .5s
 
     &__name
         font-size: 18px
@@ -24,7 +22,7 @@ $height_body_min: 70px
 
     &__body
         width: 2px
-        height: 200px
+        height: $height_body_min
         background: #FFCC00
         margin: -2em 0
         margin-left: 24px
@@ -32,18 +30,14 @@ $height_body_min: 70px
 
     &__section
         position: relative
-        & > input
-            position: absolute
-            inset: 0
-            z-index: 2
-            opacity: 0
-            cursor: pointer
 
-        &:not(:last-child)
-            & > input:checked ~  .accordion__body
+        &[done]
+            & > .accordion__trigger > .accordion__sign
+                background: #FFCC00
+
+        &[open]
+            & > .accordion__body
                 height: $height_body
-            & > input:not(:checked) ~  .accordion__body
-                height: $height_body_min
 
         &:last-child > .accordion__body
             height: 0

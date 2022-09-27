@@ -11,12 +11,12 @@ block main
         .shop-card__main
             .shop-card__accordion
                 +accordion([
-                    {name:"Корзина",done:"done"},
+                {name:"Корзина",done:"done", open:"open"},
                 {name:"Ваши данные"},
                 {name:"Завершение"}
                 ])
             .shop-card__data
-                article.shop-card__article(data-id="0")
+                article.shop-card__article(data-id="0", open="open")
                     each i in cardItems 
                         +cardItem(i)
                     .shop-card__topay Итого к оплате: 
