@@ -29,6 +29,12 @@ export class CardStage {
         this.triggers = triggers
         this.triggers.forEach(trigger => trigger && trigger.addEventListener("click", e => {
             e.preventDefault()
+            if (this.stage === 1) {
+                if (!this.cardArticles[1]) return
+                const form = this.cardArticles[1].querySelector("form")
+                if (form?.checkValidity()) { this.stage++ } else { form?.reportValidity() }
+                return
+            }
             this.stage++
         }))
         this.setHeightFirstAccordion()
@@ -57,6 +63,12 @@ export class CardStage {
             }
             this.cardArticles.forEach(e => e.removeAttribute("open"))
             this.accordionSections.forEach(e => e.removeAttribute("open"))
+            const text = document.querySelector(this.sectionClass + "__text")
+            const button = document.querySelector(this.sectionClass + "__button")
+            const img = document.querySelector(this.sectionClass + "__img")
+            if (text) text.innerHTML = `Ваша заявка успешно отправлена!`
+            if (button) button.setAttribute("open", "open")
+            if (img) img.setAttribute("open", "open")
         }
     }
     setHeightFirstAccordion() {

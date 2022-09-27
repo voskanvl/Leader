@@ -2,7 +2,7 @@ form.contact-form
     h2.contact-form__title Для отправки заявки, заполните поля для связи и Ваши пожелания к заказу
     .contact-form__data 
         input#name(type="text", name="name", required, placeholder="Имя*")
-        input#phone(type="phone", name="phone", required, placeholder="Телефон*")
+        input#phone(type="tel", name="phone", required, placeholder="Телефон*", )
         input#email(type="email", name="email", placeholder="Почта")
     .contact-form__comment
         textarea#comment(name="comment", cols="30", rows="10", placeholder="Комментарии к заказу") 
