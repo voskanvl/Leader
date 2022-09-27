@@ -17,6 +17,7 @@ export class CardStage {
     private _stage: number = 0
     accordionClass: string
     sectionClass: string
+    rule: HTMLStyleElement | null = null
     constructor(
         triggers: (HTMLButtonElement | null)[],
         accordionClass: string = ".accordion",
@@ -75,10 +76,11 @@ export class CardStage {
     }
     setHeightFirstAccordion() {
         const { height } = this.cardArticles[0].getBoundingClientRect()
-        // const rule = document.createElement("style")
-        // rule.innerHTML = `${this.accordionClass}__section:nth-child(1)[open] ${this.accordionClass}__body{height: ${height}px !important;}`
-        // document.head.append(rule)
-        const body = this.accordionSections[0].querySelector(this.accordionClass + "__body") as HTMLElement
-        body.style.height = height + "px"
+        this.rule = document.createElement("style")
+        this.rule.innerHTML = `${this.accordionClass}__section:nth-child(1)[open] ${this.accordionClass}__body{height: ${height}px !important;}`
+        if (!document.head.contains(this.rule))
+            document.head.append(this.rule)
+        // const body = this.accordionSections[0].querySelector(this.accordionClass + "__body") as HTMLElement
+        // body.style.height = height + "px"
     }
 }
