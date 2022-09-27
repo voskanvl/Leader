@@ -38,6 +38,7 @@ export class CardStage {
             this.stage++
         }))
         this.setHeightFirstAccordion()
+        window.addEventListener("resize", () => this.setHeightFirstAccordion())
     }
     get stage() {
         return this._stage
@@ -74,8 +75,10 @@ export class CardStage {
     }
     setHeightFirstAccordion() {
         const { height } = this.cardArticles[0].getBoundingClientRect()
-        const rule = document.createElement("style")
-        rule.innerHTML = `${this.accordionClass}__section:nth-child(1)[open] ${this.accordionClass}__body{height: ${height}px !important;}`
-        document.head.append(rule)
+        // const rule = document.createElement("style")
+        // rule.innerHTML = `${this.accordionClass}__section:nth-child(1)[open] ${this.accordionClass}__body{height: ${height}px !important;}`
+        // document.head.append(rule)
+        const body = this.accordionSections[0].querySelector(this.accordionClass + "__body") as HTMLElement
+        body.style.height = height + "px"
     }
 }
