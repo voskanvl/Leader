@@ -34,6 +34,7 @@
         overflow: hidden
         transition: height .5s
         margin: -170px auto 56px
+        filter: grayscale(1) brightness(1.2)
 
         &[open]
             height: 134px
@@ -49,8 +50,12 @@
 
     &__main
         display: grid
-        grid-template-columns: 200px 1fr
-
+        grid-template-columns: minmax(200px,1fr) 4fr
+        margin: 0 auto
+        // @media screen and ( max-width: 1161px )
+        //     grid-template-columns: 200px 78%
+        // @media screen and ( max-width: 930px )
+        //     grid-template-columns: 200px 78%
     &__topay
         text-align: right
         font-weight: 500
