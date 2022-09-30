@@ -3,16 +3,19 @@
     +wid
     &__data
         display: grid
-        grid-template-columns: 506fr 625fr
+        grid-template-columns: 510px 1fr
         grid-column-gap: 50px
         @media screen and ( max-width: 768px )
-            grid-template-columns: 1fr
+            grid-template-columns: 100%
+            grid-row-gap: 40px
 
     &__price
         display: flex
-        justify-content: flex-end
+        justify-content: flex-start
         align-items: flex-end
         column-gap: 15px
+        @media screen and ( max-width: 768px )
+            justify-content: flex-end
 
     &__current-price
         color: #FFB800
@@ -47,3 +50,8 @@
         column-gap: clamp(5px,1.56vw,31px)
         display: flex
         justify-content: space-between
+
+    &__article
+        opacity: .45
+        @media screen and ( max-width: 768px )
+            text-align: right

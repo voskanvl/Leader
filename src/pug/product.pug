@@ -14,7 +14,7 @@ block main
                 +galary(product.galary)
             form.product__right 
                 .product__article 
-                    span Артикул: 
+                    span Арт: 
                     span= product.article
                 .product__price 
                     .product__current-price!= String(product.price.current).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')+"&#8381"          

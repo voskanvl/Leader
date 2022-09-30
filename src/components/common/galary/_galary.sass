@@ -1,6 +1,7 @@
 .galary
     position: relative
-    max-width: 510px
+    width: min(510px,95%)
+    margin: 0 auto
     &__thumbnails
         display: flex
         justify-content: space-evenly
@@ -33,3 +34,6 @@
                 height: 77px
                 border-radius: 7px
                 margin-left: 16px
+                @media screen and ( max-width: 470px )
+                    width: 50px
+                    height: 50px
