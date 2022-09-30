@@ -1,11 +1,12 @@
 .galary
     position: relative
-    width: min(510px,95%)
+    width: min(510px,100%)
     margin: 0 auto
     &__thumbnails
         display: flex
         justify-content: space-evenly
         margin: 31px 0
+
     &__thumbnail
         cursor: pointer
         width: 71px
@@ -13,8 +14,11 @@
         border-radius: 7px
 
     &__big
+        aspect-ratio: 253 / 224
         & > img
             width: 100%
+            height: 100%
+            object-fit: cover
             border-radius: 10px
             max-width: 510px
 
