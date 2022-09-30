@@ -1,0 +1,18 @@
+extends ./leader-template.pug
+include ../components/common/crumbs/crumbs.pug
+block main
+    .partnership
+        +crumbs([{name:"Сотрудничество",href:"/partnership.html"}])
+        h2.partnership__title= partnership.title
+        .partnership__data 
+            each i in partnership.items 
+                .card-partnership
+                    img.card-partnership__img(src=i.img alt="partnership image")
+                    .card-partnership__cask
+                        h3.card-partnership__title= i.title
+                        .card-partnership__order= i.order
+                        ul.card-partnership__points 
+                            each j in i.points 
+                                li= j
+        
+
