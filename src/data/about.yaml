@@ -1,0 +1,11 @@
+about:
+  title: О компании
+  images:
+    - img: "../../assets/images/diplom1.jpg"
+      href: "#"
+    - img: "../../assets/images/diplom2.jpg"
+      href: "#"
+    - img: "../../assets/images/diplom3.jpg"
+      href: "#"
+    - img: "../../assets/images/diplom4.jpg"
+      href: "#"

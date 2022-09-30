@@ -1,0 +1,13 @@
+extends ./leader-template.pug
+include ../components/common/crumbs/crumbs.pug
+block main
+    .about
+        +crumbs([{name:"О компании",href:"/about.html"}])
+        h2.about__title= about.title 
+        p.about__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates numquam officia, officiis velit vitae porro distinctio repellat ex voluptatem, quibusdam a. Esse reiciendis maxime mollitia facilis tempora possimus harum aliquam.
+        p.about__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates numquam officia, officiis velit vitae porro distinctio repellat ex voluptatem, quibusdam a. Esse reiciendis maxime mollitia facilis tempora possimus harum aliquam.
+        .about__certificates 
+            each i in about.images
+                a.about__certificate(href=i.href)
+                    img(src=i.img alt="sertificate")
+

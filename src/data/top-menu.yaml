@@ -1,7 +1,7 @@
 topMenu:
   - 
     name: О компании
-    href: '#'
+    href: '/about.html'
   - 
     name: О продукции
     href: '#'
