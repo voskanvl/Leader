@@ -7,7 +7,7 @@
 
     &__data
         display: flex
-        column-gap: 30px
+        column-gap: min(30px,3vw)
         padding: 20px 0
         font-size: 18px
         & > input
@@ -16,6 +16,9 @@
             border-radius: 7px
             border: 1px solid #878786
             flex: 1
+        @media screen and ( max-width: 880px )
+            flex-direction: column
+            row-gap: 30px
 
     & > button.button
         color: #fff

@@ -51,7 +51,6 @@ export class CardStage {
                 }),
         );
         this.setHeightAccordionSection(0);
-        this.setHeightAccordionSection(1);
         window.addEventListener("resize", () => {
             this.setHeightAccordionSection(0);
             this.setHeightAccordionSection(1);

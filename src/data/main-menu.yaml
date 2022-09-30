@@ -4,7 +4,7 @@ mainMenu:
     href: "#"
     img: "../../assets/images/mockup-wall-children-s-room-wall-blue-colors.jpg"
   -
-    name: Мебель для школы
+    name: Мебель для учебных заведений
     href: "#"
     img: "../../assets/images/classroom-with-school-desks-greenboardempty-school-classroom.jpg"
   -
@@ -20,6 +20,6 @@ mainMenu:
     href: "#"
     img: "../../assets/images/stand-background.jpg"
   -
-    name: Мебель на заказ
+    name: Мебель специализированная
     href: "#"
     img: "../../assets/images/mid-century-modern-living-room-interior-design-with-monstera-tree.jpg"

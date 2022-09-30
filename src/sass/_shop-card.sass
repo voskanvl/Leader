@@ -52,7 +52,8 @@
         display: grid
         grid-template-columns: minmax(200px,1fr) 4fr
         margin: 0 auto
-        // @media screen and ( max-width: 1161px )
+        @media screen and ( max-width: 600px )
+            grid-template-columns: 50px 4fr
         //     grid-template-columns: 200px 78%
         // @media screen and ( max-width: 930px )
         //     grid-template-columns: 200px 78%
@@ -71,7 +72,9 @@
         &:nth-child(2)
             margin-top: 43px
             &[open]
-                height: 373px
+                height: $height_form-body
+                @media screen and ( max-width: 880px )
+                    height: auto
         &:nth-child(3)[open]
             height: 620px
 

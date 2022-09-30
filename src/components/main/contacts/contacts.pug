@@ -2,8 +2,9 @@
     .contacts__data 
         a.contacts__row(href="#")
             img.contacts__icon(src="../../../../assets/icons/pin.svg")
-            .contacts__text= common.address
-            .contacts__text= common.address1
+            .contacts__content
+                .contacts__text= common.address
+                .contacts__text= common.address1
         a.contacts__row(href="mailto:"+common.email)
             img.contacts__icon(src="../../../../assets/icons/email.svg")
             .contacts__text= common.email

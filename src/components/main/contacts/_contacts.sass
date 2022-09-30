@@ -1,28 +1,27 @@
+@import "@var"
 .contacts
-    display: grid
-    grid-template-columns: calc(975 / 1920 * 100%) calc(945 / 1920 * 100%)
-    @media screen and ( max-width: 1024px )
-        grid-template-columns: 100%
-        grid-template-rows: repeat(2, 1fr)
-        & > &__data > &__row:first-child > &__text
-            grid-column-start: 2
-            grid-column-end: 3
+    display: block
+
+    &__data
+        +wid
+        display: flex
+        column-gap: min(30px, 30/1920*100vw)
+        margin-bottom: 56px
+        & > .contacts__row
+            flex: 1 1 30%
 
     &__row
-        display: grid
-        grid-template-columns: 71px 1fr 1fr
-        place-items: center start
-        grid-column-gap: 21px
-        width: min(583px,95%)
-        margin-left: auto
-        &:not(:last-child)
-            margin-bottom: 49px
-        @media screen and ( max-width: 1024px )
-            grid-template-columns: 71px 1fr
-        &:hover
-            color: #000
-        & a:hover
-            color: #000
-    &__data
-        background: #FFCC00
-        padding: 62px 21px
+        display: flex
+        align-items: center
+        padding: 23px 20px
+        background: #E9E9E9
+        border-radius: 10px
+        column-gap: min(20px, 20/1920*100vw)
+
+    &__icon
+        width: 53px
+        height: 53px
+
+#map
+    width: 100%
+    height: 433px

@@ -26,14 +26,19 @@
             &:hover
                 color: #FFA800
 
-    &__footer
         & > button.button
             background: #EC9704
             color: #fff
             padding: 13px 37px
 
+        @media screen and ( max-width: 755px )
+            flex-direction: column
+
     & .material__item
         margin: 16px 0
+        & > .material__panel
+            padding: 18px 19px
 
     & > .cargo__title
         margin-top: 16px
+        color: #3C3C3C
