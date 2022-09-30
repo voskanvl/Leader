@@ -1,7 +1,13 @@
+include ../mixins/splide.pug
 mixin galary(arr)
     .galary 
         .galary__big 
             img(src=arr[0].big alt="big img")
-        .galary__thumbnails
+        //- .galary__thumbnails
             each i,idx in arr 
                 img.galary__thumbnail(src=i.small, alt="small img", data-id=idx, big=i.big)
+        .galary__slider
+            .arrow.arrow_180
+            +splide("galary",arr,0)
+                img(src=val.small, big=val.big)
+            .arrow

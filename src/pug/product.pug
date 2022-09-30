@@ -17,7 +17,6 @@ block main
                     span Артикул: 
                     span= product.article
                 .product__price 
-                    .product__previous-price!= String(product.price.previous).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')+"&#8381"             
                     .product__current-price!= String(product.price.current).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')+"&#8381"          
                 .pruduct__material.material 
                     h2.material__title Материал:
