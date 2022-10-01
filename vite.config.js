@@ -66,7 +66,7 @@ export default defineConfig({
                 product: resolve(__dirname, "product.html"),
                 card: resolve(__dirname, "card.html"),
                 about: resolve(__dirname, "about.html"),
-                about: resolve(__dirname, "partnership.html"),
+                partnership: resolve(__dirname, "partnership.html"),
             },
         },
     },
