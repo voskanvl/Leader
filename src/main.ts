@@ -72,14 +72,10 @@ new Counter(".counter");
 toggleSidePanel(".side-panel", "#burger");
 
 if (document.querySelector(".shop-card"))
-    new CardStage([
-        document.querySelector(
-            ".shop-card__article[data-id='0'] > button.button ",
+    new CardStage(
+        [0, 1, 2].map(e =>
+            document.querySelector(
+                `.shop-card__article[data-id='${e}'] > button.button `,
+            ),
         ),
-        document.querySelector(
-            ".shop-card__article[data-id='1'] > button.button ",
-        ),
-        document.querySelector(
-            ".shop-card__article[data-id='2']  button.button ",
-        ),
-    ]);
+    );
