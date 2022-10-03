@@ -73,9 +73,9 @@ toggleSidePanel(".side-panel", "#burger");
 
 if (document.querySelector(".shop-card"))
     new CardStage(
-        [0, 1, 2].map(e =>
+        [0, 1, 2, 3].map(e =>
             document.querySelector(
-                `.shop-card__article[data-id='${e}'] > button.button `,
+                `.shop-card__article[data-id='${e}']  button.button `,
             ),
         ),
     );
