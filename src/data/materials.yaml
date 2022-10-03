@@ -1,0 +1,13 @@
+materials:
+  - name: ДЕКОРЫ ЛДСП
+    caption: ЛДСП
+    img: "../../assets/images/materials/1.jpg"
+  - name: КОЖЗАМЕНИТЕЛЬ
+    caption: Обивочный материал
+    img: "../../assets/images/materials/2.jpg"
+  - name: МЕТАЛЛОКАРКАС
+    caption: Металлический каркас
+    img: "../../assets/images/materials/3.jpg"
+  - name: пластиковое покрытие
+    caption: Пластиковое покрытие
+    img: "../../assets/images/materials/4.jpg"

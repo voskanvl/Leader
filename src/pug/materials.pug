@@ -1,0 +1,17 @@
+extends ./leader-template.pug
+include ../components/common/panel/panel.pug
+include ../components/common/crumbs/crumbs.pug
+block main
+    .materials
+        +crumbs([{name:"Материалы",href:"#"}])
+        h1.mozaic__title.title Материалы
+        .materials__grid
+            each i in materials 
+                .materials__wrapper
+                    .materials__header= i.name
+                    figure.materials__figure 
+                        img.materials__img(src=i.img, alt="material "+i.caption)
+                        figcaption.materials__caption= i.caption
+        
+        
+

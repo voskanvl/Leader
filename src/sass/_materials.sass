@@ -1,0 +1,32 @@
+@import "@var"
+.materials
+    +wid
+    display: block
+    &__grid
+        display: grid
+        grid-template-columns: repeat(auto-fill,minmax(272px,1fr))
+        gap: clamp(5px,5/320*100vw,30px)
+    &__wrapper
+        display: grid
+        grid-template-rows: 49px
+        gap: clamp(5px,5/320*100vw,30px)
+        margin-bottom: 196px
+    &__header
+        text-transform: uppercase
+        background: #E9E9E9
+        font-size: 18px
+        font-weight: 300
+        display: grid
+        place-items: center
+        border-radius: 4px
+        transition: background-color .3s
+        &:hover
+            background: #FFCC00
+    &__caption
+        text-align: center
+        font-size: 18px
+        padding: 10px 0
+    &__figure
+        display: flex
+        flex-direction: column
+        justify-content: center
