@@ -5,6 +5,16 @@ topMenu:
   - 
     name: О продукции
     href: '#'
+    submenu: 
+        - 
+          name: Как оформить Заказ (Система скидок)
+          href: "#"
+        - 
+          name: Условия доставки
+          href: "#"
+        - 
+          name: Прайс – лист
+          href: "#"
   - 
     name: Сотрудничество
     href: '/partnership.html'
@@ -14,10 +24,7 @@ topMenu:
   - 
     name: Наши работы
     href: '/ownworks.html'
-    submenu: 
-        - 
-          name: Очень важная работа
-          href: "#"
+   
   - 
     name: Контакты
     href: '#'

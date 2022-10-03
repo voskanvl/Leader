@@ -3,10 +3,13 @@
     +wid
     display: flex
     justify-content: flex-end
+    align-items: center
     column-gap: min(43px, calc(43 / 1180 * 100vw))
 
     &__item
         padding: 29px 0 27px
+        &:hover > .submenu
+            display: flex
 
     @media screen and ( max-width: $switch_menu_resolution )
         display: none
