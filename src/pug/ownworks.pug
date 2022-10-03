@@ -1,0 +1,12 @@
+extends ./leader-template.pug
+include ../components/common/panel/panel.pug
+include ../components/common/crumbs/crumbs.pug
+block main
+    .ownworks
+        +crumbs([{name:"Наши работы",href:"#"}])
+        h1.mozaic__title.title Наша продукция
+        .mozaic
+            each i in ownworks 
+                +panel(i.name,i.img,"#")
+        
+
