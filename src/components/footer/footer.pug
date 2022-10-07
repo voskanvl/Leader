@@ -6,7 +6,15 @@
     ul.footer.menu 
         each i in topMenu
             li.footer__item 
-                a(href=i.href)= i.name
+                if i.submenu
+                    a.submenu__head(href=i.href)= i.name
+                        img(src="../../../../assets/icons/chevron-down.svg")
+                    ul.top-menu__submenu.submenu
+                        each item in i.submenu 
+                            li.submenu__item 
+                                a(href=item.href)= item.name
+                else
+                    a(href=i.href)= i.name
     ul.footer.menu 
         each i in [{name:"Продукция"},...mainMenu]
             li.footer__item 

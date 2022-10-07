@@ -1,6 +1,7 @@
 include ../counter/counter.pug
 mixin cardItem(item)
     .card-item
+        img.card-item__cross(src="../../../../assets/icons/cross.svg")
         img.card-item__img(src=item.img, alt="item image")
         .card-item__content 
             .card-item__name= item.name 

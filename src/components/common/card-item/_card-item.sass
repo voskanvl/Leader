@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 2fr 1fr 1fr
     border-radius: 7px
     border: 1px solid #878786
+    position: relative
     @media screen and ( max-width: 1161px )
         grid-template-columns: 1fr 2fr 1fr
     @media screen and ( max-width: 930px )
@@ -71,3 +72,10 @@
 
     &__content
         margin: 14px auto 10px 1em
+    &__cross
+        position: absolute
+        height: 16px
+        width: 16px
+        right: .5em
+        top: 0.5em
+        cursor: pointer
