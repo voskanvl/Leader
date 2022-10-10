@@ -67,20 +67,20 @@ export class CardStage {
     set stage(x) {
         this._stage = x;
         console.log("🚀 ~ this._stage", this._stage);
-        if (this.trigger && this.trigger.parentElement)
-            this.trigger.parentElement.setAttribute("stage", x + "");
+        if (this.trigger && this.trigger.parentElement && this.trigger.parentElement.parentElement)
+            this.trigger.parentElement.parentElement.setAttribute("stage", x + "");
         if (x === 1) {
             if (this.accordionSections[1]) {
                 this.accordionSections[1].setAttribute("done", "done");
                 this.accordionSections[1].setAttribute("open", "open");
             }
-            this.cardArticles[1].setAttribute("open", "open");
+            // this.cardArticles[1].setAttribute("open", "open");
             this.trigger && (this.trigger.textContent = "Далее");
             const handle = () => this.setHeightAccordionSection(1);
             setTimeout(handle, 400);
         }
         if (x === 2) {
-            this.cardArticles[2].setAttribute("open", "open");
+            // this.cardArticles[2].setAttribute("open", "open");
             this.trigger && (this.trigger.textContent = "Отправить");
             if (this.trigger && this.trigger.nextSibling)
                 (
@@ -91,7 +91,7 @@ export class CardStage {
             if (this.accordionSections[2]) {
                 this.accordionSections[2].setAttribute("done", "done");
             }
-            this.cardArticles.forEach(e => e.removeAttribute("open"));
+            // this.cardArticles.forEach(e => e.removeAttribute("open"));
             this.accordionSections.forEach(e => e.removeAttribute("open"));
             const text = document.querySelector(this.sectionClass + "__text");
             const button = document.querySelector(this.sectionClass + "__button");

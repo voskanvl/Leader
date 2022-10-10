@@ -67,16 +67,25 @@
         transition: height .5s
         height: 0
 
-        &:first-child[open]
+        &:first-child
             height: auto
         &:nth-child(2)
             margin-top: 43px
-            &[open]
-                height: $height_form-body
-                @media screen and ( max-width: 880px )
-                    height: auto
-        &:nth-child(3)[open]
-            height: auto
 
     &__text
         margin-bottom: 40px
+
+    &[stage="1"] &__article:nth-child(2)
+        height: $height_form-body
+        @media screen and ( max-width: 880px )
+            height: auto
+    &[stage="2"] &__article:nth-child(2)
+        height: $height_form-body
+        @media screen and ( max-width: 880px )
+            height: auto
+
+    &[stage="2"] &__article:nth-child(3)
+        height: auto
+
+    &[stage="3"] &__article
+        height: 0
