@@ -56,13 +56,9 @@ cardListControls.length === 2 &&
 
 const galaryControls = document.querySelectorAll(".galary__slider > .arrow");
 galaryControls.length === 2 &&
-    galaryControls[0].addEventListener("click", () =>
-        splidesInstance.instances["#galary"].go("<"),
-    );
+    galaryControls[0].addEventListener("click", () => splidesInstance.instances["#galary"].go("<"));
 galaryControls.length === 2 &&
-    galaryControls[1].addEventListener("click", () =>
-        splidesInstance.instances["#galary"].go(">"),
-    );
+    galaryControls[1].addEventListener("click", () => splidesInstance.instances["#galary"].go(">"));
 
 new Tabs(".tabs__button", ".tabs__item");
 new Galary(".galary__big > img", ".galary__slider > .splide img");
@@ -71,11 +67,30 @@ new Counter(".counter");
 
 toggleSidePanel(".side-panel", "#burger");
 
-if (document.querySelector(".shop-card"))
-    new CardStage(
-        [0, 1, 2, 3].map(e =>
-            document.querySelector(
-                `.shop-card__article[data-id='${e}']  button.button `,
-            ),
-        ),
-    );
+new CardStage(document.querySelector("#trigger"));
+
+/* TABS */
+let activeTab = "0";
+const tabs = document.querySelector(".materials__grid.tabs");
+const figures = document.querySelectorAll(".materials__figure");
+tabs &&
+    tabs.addEventListener("click", ({ target }: Event) => {
+        activeTab = (target as HTMLElement).dataset.id || "0";
+        console.log(activeTab);
+        // for(let i = 0; i < tabs.children.length, i)
+        Array.from(tabs.children).forEach((e: Element) => {
+            if ((e as HTMLElement).dataset.id === activeTab) {
+                (e as HTMLElement).setAttribute("open", "open");
+            } else {
+                (e as HTMLElement).setAttribute("open", "close");
+            }
+        });
+        figures.forEach((e: Element) => {
+            const { dataset } = e as HTMLElement;
+            if (dataset.id === activeTab) {
+                (e as HTMLElement).setAttribute("open", "open");
+            } else {
+                (e as HTMLElement).setAttribute("open", "close");
+            }
+        });
+    });
