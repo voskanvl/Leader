@@ -27,6 +27,10 @@ block main
                     include ../components/common/total/total.pug
         .trigger
             button.button.trigger__button#trigger Оформить
+            #buttons(style="display:none")
+                .simplecheckout-button-right
+                    a.button.btn.registration__login#simplecheckout_button_confirm(onclick="simplecheckout_submit();")
+                        span Оформить заказ
             .trigger__disclaimer 
                 |Нажимая на кнопку, вы даете согласие на обработку
                 |персональных данных и соглашаетесь c 

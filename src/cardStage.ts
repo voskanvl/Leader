@@ -11,6 +11,7 @@ shop-card__article data-id="0"
 */
 
 export class CardStage {
+    main: HTMLStyleElement | null = null;
     accordionSections: HTMLElement[];
     cardArticles: HTMLElement[];
     trigger: HTMLButtonElement | null;
@@ -18,11 +19,14 @@ export class CardStage {
     accordionClass: string;
     sectionClass: string;
     rule: HTMLStyleElement | null = null;
+    observer: MutationObserver | null = null;
+
     constructor(
         trigger: HTMLButtonElement | null,
         accordionClass: string = ".accordion",
         sectionClass: string = ".shop-card",
     ) {
+        this.main = document.querySelector(sectionClass + "__main");
         this.accordionClass = accordionClass;
         this.sectionClass = sectionClass;
         this.accordionSections = Array.from(
@@ -53,6 +57,9 @@ export class CardStage {
             this.setHeightAccordionSection(0);
             this.setHeightAccordionSection(1);
         });
+        this.observer = new MutationObserver(console.log);
+        (window as any).observer = this.observer;
+        this.main && this.observer.observe(this.main, { childList: true, subtree: true });
     }
     get stage() {
         return this._stage;
@@ -76,7 +83,9 @@ export class CardStage {
             this.cardArticles[2].setAttribute("open", "open");
             this.trigger && (this.trigger.textContent = "Отправить");
             if (this.trigger && this.trigger.nextSibling)
-                (this.trigger.nextElementSibling as HTMLElement).style.display = "block";
+                (
+                    this.trigger.parentElement?.querySelector(".trigger__disclaimer") as HTMLElement
+                ).style.display = "block";
         }
         if (x === 3) {
             if (this.accordionSections[2]) {
@@ -104,7 +113,3 @@ export class CardStage {
         // body.style.height = height + "px"
     }
 }
-
-//TODO: изменять название на trigger в зависимости от стадии
-//TODO: на стадии 3 изменить margin-top
-//TODO: на стадии 4 разобраться сотображением
