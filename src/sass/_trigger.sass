@@ -1,0 +1,21 @@
+.trigger
+    margin-left: 200px
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    align-items: center
+    margin-top: -80px
+    @media screen and ( max-width: 600px )
+        margin: 0 auto
+        & > &__button
+            margin: 0 auto
+
+    &__disclaimer
+        display: none
+        & > a
+            color: #ffcc00
+
+    &[stage="2"]
+        margin-top: 0
+    &[stage="3"]
+        display: none
