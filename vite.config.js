@@ -49,8 +49,7 @@ function CustomHmr() {
                 });
             }
         },
-        transformIndexHtml: vitePugPlugin({ pugLocals: merge(STANDART) })
-            .transformIndexHtml,
+        transformIndexHtml: vitePugPlugin({ pugLocals: merge(STANDART) }).transformIndexHtml,
     };
 }
 
@@ -65,6 +64,7 @@ export default defineConfig({
                 catalog: resolve(__dirname, "catalog.html"),
                 product: resolve(__dirname, "product.html"),
                 card: resolve(__dirname, "card.html"),
+                ["empty-card"]: resolve(__dirname, "empty-card.html"),
                 about: resolve(__dirname, "about.html"),
                 ownworks: resolve(__dirname, "ownworks.html"),
                 partnership: resolve(__dirname, "partnership.html"),

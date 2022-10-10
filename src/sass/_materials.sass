@@ -6,6 +6,7 @@
         display: grid
         grid-template-columns: repeat(auto-fill,minmax(272px,1fr))
         gap: clamp(5px,5/320*100vw,30px)
+        margin-bottom: 31px
     &__wrapper
         display: grid
         grid-template-rows: 49px
@@ -20,13 +21,19 @@
         place-items: center
         border-radius: 4px
         transition: background-color .3s
+        cursor: pointer
+        padding: 14px 0
         &:hover
+            background: #FFCC00
+        &[open="open"]
             background: #FFCC00
     &__caption
         text-align: center
         font-size: 18px
         padding: 10px 0
     &__figure
-        display: flex
-        flex-direction: column
-        justify-content: center
+        display: none
+        &[open="open"]
+            display: flex
+            flex-direction: column
+            justify-content: center

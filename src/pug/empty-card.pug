@@ -1,0 +1,15 @@
+extends ./leader-template.pug
+include ../components/common/card/card.pug
+include ../components/common/crumbs/crumbs.pug
+include ../components/common/tabs/tabs.pug
+include ../components/common/accordion/accordion.pug
+include ../components/common/card-item/card-item.pug
+block main
+    .shop-card
+        +crumbs([{name:"Корзина",href:"/card.html"}])
+        h1.shop-card__title.title Корзина
+
+        .shop-card__text В вашей коризине пока нет товаров...
+        a.shop-card__button(href="/catalog.html") Перейти в каталог
+        
+

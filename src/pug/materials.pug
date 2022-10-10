@@ -5,13 +5,15 @@ block main
     .materials
         +crumbs([{name:"Материалы",href:"#"}])
         h1.mozaic__title.title Материалы
-        .materials__grid
+        .materials__grid.tabs
             each i in materials 
-                .materials__wrapper
-                    .materials__header= i.name
-                    figure.materials__figure 
-                        img.materials__img(src=i.img, alt="material "+i.caption)
-                        figcaption.materials__caption= i.caption
-        
+                .materials__header(data-id=i.idx, open=i.idx===0 ? "open" : "close")= i.name
+        .materials__grid.pages
+            each i in materials 
+                each j in i.items 
+                    figure.materials__figure(data-id=i.idx, open=i.idx===0 ? "open" : "close") 
+                        img.materials__img(src=j.img, alt="material "+j.caption)
+                        figcaption.materials__caption= j.caption
+            
         
 

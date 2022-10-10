@@ -21,11 +21,16 @@ block main
                         +cardItem(i)
                     .shop-card__topay Итого к оплате: 
                         span!= String(200999).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 ")+"&#8381;"
-                    button.button Оформить 
                 article.shop-card__article(data-id="1")
                     include ../components/common/contact-form/contact-form.pug
                 article.shop-card__article(data-id="2")
                     include ../components/common/total/total.pug
+        .trigger
+            button.button.trigger__button#trigger Оформить
+            .trigger__disclaimer 
+                |Нажимая на кнопку, вы даете согласие на обработку
+                |персональных данных и соглашаетесь c 
+                a(href="#") политикой конфиденциальности.
 
         img.shop-card__img(src="../../assets/svg/success.svg" alt="success")
         .shop-card__text 
