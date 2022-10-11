@@ -19,7 +19,6 @@ export class CardStage {
     accordionClass: string;
     sectionClass: string;
     rule: HTMLStyleElement | null = null;
-    observer: MutationObserver | null = null;
 
     constructor(
         trigger: HTMLButtonElement | null,
@@ -57,9 +56,6 @@ export class CardStage {
             this.setHeightAccordionSection(0);
             this.setHeightAccordionSection(1);
         });
-        this.observer = new MutationObserver(console.log);
-        (window as any).observer = this.observer;
-        this.main && this.observer.observe(this.main, { childList: true, subtree: true });
     }
     get stage() {
         return this._stage;
@@ -109,7 +105,5 @@ export class CardStage {
             this.accordionClass
         }__body{height: ${height}px !important;}`;
         if (!document.head.contains(this.rule)) document.head.append(this.rule);
-        // const body = this.accordionSections[0].querySelector(this.accordionClass + "__body") as HTMLElement
-        // body.style.height = height + "px"
     }
 }

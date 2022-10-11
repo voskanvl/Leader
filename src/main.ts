@@ -94,3 +94,11 @@ tabs &&
             }
         });
     });
+
+/* #buttons */
+const simplecheckoutButtonConfirm = document.querySelector("#simplecheckout_button_confirm");
+simplecheckoutButtonConfirm &&
+    simplecheckoutButtonConfirm.addEventListener("click", () => {
+        const trigger = document.querySelector("#trigger");
+        trigger && trigger instanceof HTMLButtonElement && trigger.click();
+    });
