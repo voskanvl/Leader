@@ -1,0 +1,30 @@
+extends ./leader-template.pug
+include ../components/common/panel/panel.pug
+include ../components/common/crumbs/crumbs.pug
+block main
+    .shop-card
+        +crumbs([{name:"О продукции",href:"#"},{name:"Прайс-лист",href:"#"}])
+        h1.price.title Прайс-лист
+        p.price__text Если Вас интересуют цены на наши изделия, заполните пожалуйста форму и по Вашему запросу будет выслан прайс-лист.
+        p.price__text Ваша информация не будет разглашена третьим лицам. Вы можете отправить нам сообщение или оставить заявку.
+        p.price__text Мы свяжемся с вами в ближайшее время.
+        form.price__form
+            input.price__input.price__input_half#name(type="text", name="name", placeholder="Имя*", required)
+            input.price__input.price__input_half#phone(type="tel", name="phone", placeholder="Телефон*",required)
+            input.price__input.price__input_half#email(type="email", name="email", placeholder="Почта")
+            input.price__input.price__input_half#company(type="text", name="company", placeholder="Компания")
+            input.price__input#address(type="text", name="address", placeholder="Адрес")
+            textarea.price__input.price__textarea#comments(name="comments", placeholder="Комментарии")
+            label.price__file
+                input(type="file" name="file")
+                img(src="../../assets/icons/clip.svg")
+                span Выбрать файл
+            .price__send
+                button.button Оформить
+                .price__disclaimer 
+                    |Нажимая на кнопку, вы даете согласие на обработку
+                    |персональных данных и соглашаетесь c 
+                    a(href="#") политикой конфиденциальности.
+    
+        
+

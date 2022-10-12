@@ -4,8 +4,16 @@
             img.logo(src="../../../../assets/svg/logo.svg")
         ul.main-menu__menu
             each i in mainMenu
-                li.main-menu__item
-                    a(href=i.href)= i.name
+                if i.submenu 
+                    li.main-menu__item
+                        a(href=i.href)= i.name
+                        ul.main-menu__submenu
+                            each j in i.submenu 
+                                li
+                                    a(href=j.href)= j.name
+                else
+                    li.main-menu__item
+                        a(href=i.href)= i.name
         .burger#burger      
     .main-menu__down
         .long-yellow-line 

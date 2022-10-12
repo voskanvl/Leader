@@ -69,6 +69,7 @@ export default defineConfig({
                 ownworks: resolve(__dirname, "ownworks.html"),
                 partnership: resolve(__dirname, "partnership.html"),
                 materials: resolve(__dirname, "materials.html"),
+                price: resolve(__dirname, "price.html"),
             },
         },
     },

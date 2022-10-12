@@ -3,6 +3,14 @@ mainMenu:
     name: Мебель для детских садов
     href: "#"
     img: "../../assets/images/mockup-wall-children-s-room-wall-blue-colors.jpg"
+    submenu: 
+      - name: стулья
+        href: "#"
+      - name: кровати
+        href: "#"
+      - name: тумбы
+        href: "#"
+
   -
     name: Мебель для учебных заведений
     href: "#"
