@@ -1,5 +1,6 @@
 
 ul.side-panel
+    img.side-panel__close(src="../../../../assets/icons/cross.svg")
     each i in topMenu 
         li.side-panel__item
             a(href= i.href)= i.name
@@ -16,4 +17,4 @@ ul.side-panel
                 ul.side-panel__submenu
                     each j in i.submenu 
                         li.side-panel__item 
-                            a(href= i.href)= j
+                            a(href= i.href)= j.name
