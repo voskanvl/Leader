@@ -99,6 +99,7 @@ export class CardStage {
         }
     }
     setHeightAccordionSection(n: number) {
+        if (!this.cardArticles[n]) return;
         const { height } = this.cardArticles[n].getBoundingClientRect();
         this.rule = document.createElement("style");
         this.rule.innerHTML = `${this.accordionClass}__section:nth-child(${n + 1})[open] ${

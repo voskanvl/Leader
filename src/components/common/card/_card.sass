@@ -13,6 +13,8 @@ $responce_width: clamp(220px,33.33vw, 283px)
 
     &__img
         height: 100%
+        width: 100%
+        object-fit: contain
 
     &__icons
         position: absolute
@@ -51,7 +53,18 @@ $responce_width: clamp(220px,33.33vw, 283px)
 
     &__name
         font-weight: 500
-        font-size: 20px
+        font-size: clamp(15px, 15/320*100vw,20px)
+        padding: 0 1em
+
+        overflow: hidden
+        text-overflow: ellipsis
+        display: -moz-box
+        -moz-box-orient: vertical
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+        line-clamp: 2
+        box-orient: vertical
 
     &__price
         font-weight: 500

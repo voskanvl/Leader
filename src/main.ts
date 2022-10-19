@@ -32,6 +32,7 @@ galaryEl &&
         pagination: false,
         perPage: 4,
         perMove: 1,
+        direction: "ttb",
     });
 
 const tiserControls = document.querySelector(".tiser__controls")?.children;
@@ -102,3 +103,18 @@ simplecheckoutButtonConfirm &&
         const trigger = document.querySelector("#trigger");
         trigger && trigger instanceof HTMLButtonElement && trigger.click();
     });
+/* price */
+const form = document.querySelector<HTMLFormElement>("form.price__form");
+const priceSubmit = document.querySelector("form.price__form button.button");
+if (form && priceSubmit) {
+    priceSubmit.addEventListener("click", async (e: Event) => {
+        e.preventDefault();
+        const resp = await fetch("/mail.php", {
+            method: "POST",
+            body: new FormData(form),
+        });
+        if (resp.ok) {
+            Array.from(form.elements).forEach(e => ((e as HTMLInputElement).value = ""));
+        }
+    });
+}
